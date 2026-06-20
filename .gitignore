@@ -1,0 +1,57 @@
+.nextflow/
+.nextflow.log*
+work/
+results/
+*.tmp
+*.log
+
+# Hendriksen pilot large/intermediate files
+rr-analysis/hendriksen_sensitivity/fastp_bowtie2_8sample/
+rr-analysis/hendriksen_sensitivity/rgi_bwt/
+rr-analysis/hendriksen_sensitivity/rgi_ERR1713332_test/
+rr-analysis/hendriksen_sensitivity/truth_set/
+rr-analysis/hendriksen_sensitivity/ena_metadata/
+rr-analysis/hendriksen_sensitivity/overnight_status/
+rr-analysis/hendriksen_sensitivity/*.pid
+rr-analysis/hendriksen_sensitivity/*download*.sh
+rr-analysis/hendriksen_sensitivity/*overnight*.sh
+*.fastq.gz
+*.fa
+*.bt2
+
+# Hendriksen extra generated figures/tables not committed
+rr-analysis/hendriksen_sensitivity/figures/*.pdf
+rr-analysis/hendriksen_sensitivity/figures/Figure_3_4_Hendriksen_CARD_RGI_sensitivity.*
+rr-analysis/hendriksen_sensitivity/jobs/
+rr-analysis/hendriksen_sensitivity/metadata/
+rr-analysis/hendriksen_sensitivity/methods/
+rr-analysis/hendriksen_sensitivity/run_ERR1713332_rgi_bwt.sh
+rr-analysis/hendriksen_sensitivity/tables/ERR1713332_*
+rr-analysis/hendriksen_sensitivity/tables/Stage3_4B_truth_genes_long.tsv
+rr-analysis/hendriksen_sensitivity/tables/Stage3_4_RGI_gene_mapping_combined.tsv
+rr-analysis/hendriksen_sensitivity/tables/Stage3_4_RGI_overall_mapping_summary_raw.tsv
+rr-analysis/hendriksen_sensitivity/tables/Stage3_4_RGI_resistance_mechanism_summary.tsv
+rr-analysis/hendriksen_sensitivity/tables/Stage3_4_RGI_sample_by_drug_class.tsv
+rr-analysis/hendriksen_sensitivity/tables/Stage3_4_RGI_sample_by_top_drug_class_matrix.tsv
+rr-analysis/hendriksen_sensitivity/tables/Table_3_4_Hendriksen_CARD_RGI_sensitivity.csv
+
+# Extra Hendriksen PNGs not committed
+rr-analysis/hendriksen_sensitivity/figures/Stage3_2_FASTP_retention_Q30.png
+rr-analysis/hendriksen_sensitivity/figures/Stage3_4_RGI_ARG_hit_rows_per_sample.png
+rr-analysis/hendriksen_sensitivity/figures/Stage3_4_RGI_resistance_mechanisms.png
+
+# ResistanceRadar runtime data and large outputs
+rr-analysis/hendriksen_sensitivity/data_fetch/
+rr-analysis/hendriksen_sensitivity/logs/
+rr-analysis/hendriksen_sensitivity/rgi_bwt_batch01_selected8/
+rr-analysis/hendriksen_sensitivity/stage3_4c_diamond_card/db/
+rr-analysis/hendriksen_sensitivity/stage3_4c_diamond_card/logs/
+rr-analysis/hendriksen_sensitivity/stage3_4c_diamond_card/results_cleanfasta/
+rr-analysis/hendriksen_sensitivity/stage3_4c_diamond_card/test_ERR1713332_subset/*.fastq.gz
+rr-analysis/hendriksen_sensitivity/stage3_4c_diamond_card/test_ERR1713332_subset/*.fq.gz
+rr-analysis/hendriksen_sensitivity/stage3_4c_diamond_card/test_ERR1713332_subset/*.fasta
+rr-analysis/hendriksen_sensitivity/stage3_4c_diamond_card/test_ERR1713332_subset/*.fa
+*.bam
+*.bam.bai
+*.fastq.gz
+*.fq.gz
