@@ -1,0 +1,29 @@
+Selected8 Stage 3.4C DIAMOND/CARD concordance interpretation
+
+Status:
+Complete and verified for 8/8 selected8 samples.
+
+Inputs:
+- DIAMOND/CARD merged blastx outputs from results_cleanfasta_selected8
+- CARD/RGI BWT normalized gene-level table:
+  selected8_rgi_gene_level_hits_normalized.tsv
+
+Correction:
+The first concordance run incorrectly selected "ARO Term" as the RGI identifier column.
+The script was corrected to use "ARO Accession" and convert numeric CARD accessions to ARO:<accession> format before comparison.
+
+Corrected ARO-level concordance:
+ERR1713350: overlap 503, Jaccard 0.353
+ERR1713354: overlap 394, Jaccard 0.361
+ERR1713355: overlap 530, Jaccard 0.378
+ERR1713359: overlap 279, Jaccard 0.333
+ERR1713361: overlap 217, Jaccard 0.345
+ERR1713362: overlap 488, Jaccard 0.352
+ERR1713365: overlap 343, Jaccard 0.353
+ERR1713369: overlap 506, Jaccard 0.372
+
+Interpretation:
+DIAMOND/CARD provides an independent protein-level CARD screen that shows substantial ARO-level overlap with CARD/RGI BWT across all selected8 samples. The concordance is not expected to be 1.0 because the tools use different algorithms, evidence models, and thresholds.
+
+Conclusion:
+Selected8 Stage 3.4C is complete and interpretable.
