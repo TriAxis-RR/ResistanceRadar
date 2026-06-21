@@ -1,0 +1,70 @@
+#!/bin/bash
+#BSUB -J "MEGAHIT_SELECTED8[1-8]%2"
+#BSUB -q single_chassis
+#BSUB -n 8
+#BSUB -R "span[hosts=1]"
+#BSUB -R "rusage[mem=48GB]"
+#BSUB -W 72:00
+#BSUB -o rr-analysis/hendriksen_sensitivity/stage3_5_mobility/logs/MEGAHIT_SELECTED8_%I_%J.out
+#BSUB -e rr-analysis/hendriksen_sensitivity/stage3_5_mobility/logs/MEGAHIT_SELECTED8_%I_%J.err
+
+set -euo pipefail
+
+REPO="/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline"
+SAMPLESHEET="${REPO}/rr-analysis/hendriksen_sensitivity/metadata/hendriksen_selected8_stage3_5_megahit_samples.tsv"
+MEGAHIT="/rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_mobility/bin/megahit"
+OUTROOT="${REPO}/rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_selected8"
+
+cd "${REPO}"
+
+mkdir -p "${OUTROOT}"
+mkdir -p "${REPO}/rr-analysis/hendriksen_sensitivity/stage3_5_mobility/logs"
+
+LINE=$(awk -v n="${LSB_JOBINDEX}" 'NR==n+1 {print}' "${SAMPLESHEET}")
+
+if [[ -z "${LINE}" ]]; then
+  echo "ERROR: No sample line found for LSB_JOBINDEX=${LSB_JOBINDEX}"
+  exit 1
+fi
+
+SAMPLE_ID=$(echo "${LINE}" | awk '{print $1}')
+READ1=$(echo "${LINE}" | awk '{print $2}')
+READ2=$(echo "${LINE}" | awk '{print $3}')
+
+echo "========================================"
+echo "Stage 3.5 MEGAHIT assembly selected8"
+echo "Sample: ${SAMPLE_ID}"
+echo "R1: ${READ1}"
+echo "R2: ${READ2}"
+echo "Output root: ${OUTROOT}"
+echo "Job index: ${LSB_JOBINDEX}"
+echo "========================================"
+
+if [[ ! -s "${READ1}" ]]; then
+  echo "ERROR: Missing or empty R1: ${READ1}"
+  exit 1
+fi
+
+if [[ ! -s "${READ2}" ]]; then
+  echo "ERROR: Missing or empty R2: ${READ2}"
+  exit 1
+fi
+
+OUTDIR="${OUTROOT}/${SAMPLE_ID}"
+
+if [[ -d "${OUTDIR}" ]]; then
+  echo "Existing output directory found: ${OUTDIR}"
+  echo "Removing incomplete/old MEGAHIT output before rerun."
+  rm -rf "${OUTDIR}"
+fi
+
+"${MEGAHIT}" \
+  -1 "${READ1}" \
+  -2 "${READ2}" \
+  -o "${OUTDIR}" \
+  --out-prefix "${SAMPLE_ID}" \
+  -t 8 \
+  --min-contig-len 1000
+
+echo "MEGAHIT finished for ${SAMPLE_ID}"
+ls -lh "${OUTDIR}/${SAMPLE_ID}.contigs.fa"

@@ -1,0 +1,27 @@
+Pilot8 Stage 3.5 MEGAHIT assembly completion checkpoint
+
+Status:
+Complete for 8/8 pilot8 samples.
+
+Samples with final contigs:
+ERR1713331
+ERR1713332
+ERR1713334
+ERR1713337
+ERR1713339
+ERR1713344
+ERR1725947
+ERR1725962
+
+Final contig directory:
+rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_pilot8
+
+Final contig pattern:
+<SAMPLE>/<SAMPLE>.contigs.fa
+
+Important:
+Use only top-level final MEGAHIT contigs for geNomad.
+Do not use MEGAHIT intermediate_contigs for geNomad.
+
+Next step:
+Run geNomad on the 8 pilot8 final contigs.
