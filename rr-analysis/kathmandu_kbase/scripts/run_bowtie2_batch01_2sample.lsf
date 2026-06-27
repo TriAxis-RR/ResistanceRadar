@@ -1,0 +1,70 @@
+#!/bin/bash
+#BSUB -J "KATH_BT2_B01[1-2]%2"
+#BSUB -q single_chassis
+#BSUB -n 2
+#BSUB -R "span[hosts=1]"
+#BSUB -R "rusage[mem=8GB]"
+#BSUB -W 24:00
+#BSUB -o rr-analysis/kathmandu_kbase/logs/KATH_BT2_B01_%I_%J.out
+#BSUB -e rr-analysis/kathmandu_kbase/logs/KATH_BT2_B01_%I_%J.err
+
+set -euo pipefail
+
+REPO="/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline"
+SHEET="${REPO}/rr-analysis/kathmandu_kbase/metadata/kathmandu_batch01_2sample_bowtie2_samples.tsv"
+OUTDIR="${REPO}/rr-analysis/kathmandu_kbase/results/bowtie2_batch01_2sample"
+INDEX="/rsstu/users/s/sleblan/MismatchRepair/Project/references/decontamination/v1.0/decontamination_v1.0"
+
+cd "${REPO}"
+
+source /usr/local/apps/miniconda20240526/etc/profile.d/conda.sh
+conda activate /rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_meta
+
+mkdir -p "${OUTDIR}"
+mkdir -p "${REPO}/rr-analysis/kathmandu_kbase/logs"
+
+sample_id=$(awk -v i="${LSB_JOBINDEX}" 'NR==i+1 {print $1}' "${SHEET}")
+r1=$(awk -v i="${LSB_JOBINDEX}" 'NR==i+1 {print $2}' "${SHEET}")
+r2=$(awk -v i="${LSB_JOBINDEX}" 'NR==i+1 {print $3}' "${SHEET}")
+group=$(awk -v i="${LSB_JOBINDEX}" 'NR==i+1 {print $4}' "${SHEET}")
+
+echo "========================================"
+echo "Kathmandu Bowtie2/decontamination batch01"
+echo "Task index: ${LSB_JOBINDEX}"
+echo "Sample: ${sample_id}"
+echo "Group: ${group}"
+echo "R1: ${r1}"
+echo "R2: ${r2}"
+echo "Index: ${INDEX}"
+echo "Output: ${OUTDIR}/${sample_id}"
+echo "========================================"
+
+if [[ -z "${sample_id}" ]]; then
+  echo "ERROR: No sample found for LSB_JOBINDEX=${LSB_JOBINDEX}"
+  exit 1
+fi
+
+if [[ ! -s "${r1}" ]]; then
+  echo "ERROR: Missing R1: ${r1}"
+  exit 1
+fi
+
+if [[ ! -s "${r2}" ]]; then
+  echo "ERROR: Missing R2: ${r2}"
+  exit 1
+fi
+
+mkdir -p "${OUTDIR}/${sample_id}"
+
+bowtie2 \
+  --very-sensitive \
+  -x "${INDEX}" \
+  -1 "${r1}" \
+  -2 "${r2}" \
+  --threads 2 \
+  --un-conc-gz "${OUTDIR}/${sample_id}/${sample_id}_decontam_R%.fastq.gz" \
+  -S /dev/null \
+  2> "${OUTDIR}/${sample_id}/${sample_id}.bowtie2.summary.txt"
+
+echo "DONE: ${sample_id}"
+ls -lh "${OUTDIR}/${sample_id}"

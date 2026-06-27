@@ -1,0 +1,6 @@
+Selected8 Stage 3.4C DIAMOND/CARD summary complete.
+Input directory: rr-analysis/hendriksen_sensitivity/stage3_4c_diamond_card/results_cleanfasta_selected8
+Output directory: rr-analysis/hendriksen_sensitivity/stage3_4c_diamond_card/results_summary_selected8
+Generated: selected8_diamond_card_hit_summary.tsv
+Generated: selected8_diamond_card_sample_summary.tsv
+Generated if possible: selected8_diamond_card_vs_rgi_aro_concordance.tsv

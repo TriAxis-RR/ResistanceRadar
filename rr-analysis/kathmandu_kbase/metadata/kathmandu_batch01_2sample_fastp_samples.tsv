@@ -1,0 +1,3 @@
+sample_id	read1	read2	group
+E_3-4	rr-analysis/kathmandu_kbase/kbase_clean_reads/batch01/E_3-4_1.fastq.gz	rr-analysis/kathmandu_kbase/kbase_clean_reads/batch01/E_3-4_2.fastq.gz	effluent
+I_3-4	rr-analysis/kathmandu_kbase/kbase_clean_reads/batch01/I_3-4_1.fastq.gz	rr-analysis/kathmandu_kbase/kbase_clean_reads/batch01/I_3-4_2.fastq.gz	influent

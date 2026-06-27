@@ -1,0 +1,46 @@
+Kathmandu KBase batch01 2-sample FASTP checkpoint
+
+Status:
+Complete and gzip-verified for 2/2 paired-end samples.
+
+Samples:
+E_3-4  effluent
+I_3-4  influent
+
+Input folder:
+rr-analysis/kathmandu_kbase/kbase_clean_reads/batch01
+
+FASTP output folder:
+rr-analysis/kathmandu_kbase/results/fastp_batch01_2sample
+
+Outputs confirmed:
+E_3-4_fastp_R1.fastq.gz
+E_3-4_fastp_R2.fastq.gz
+E_3-4_fastp.html
+E_3-4_fastp.json
+I_3-4_fastp_R1.fastq.gz
+I_3-4_fastp_R2.fastq.gz
+I_3-4_fastp.html
+I_3-4_fastp.json
+
+FASTP executable:
+/rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_meta/bin/fastp
+
+FASTP version:
+fastp 1.3.3
+
+LSF job:
+565284
+
+Resource setting that worked:
+2 threads, 8GB memory, single_chassis queue
+
+Validation:
+All four cleaned FASTQ.gz outputs passed gzip -t with gzip_exit_code=0.
+No real crash/error messages were detected in FASTP stderr logs.
+
+Note:
+FASTP reported reads filtered due to low quality, too many N bases, short length, and adapter dimers. These are normal FASTP QC-filtering statistics, not job errors.
+
+Next step:
+Run Bowtie2/decontamination on these two FASTP-cleaned Kathmandu samples, then proceed to CARD/RGI after decontamination.
