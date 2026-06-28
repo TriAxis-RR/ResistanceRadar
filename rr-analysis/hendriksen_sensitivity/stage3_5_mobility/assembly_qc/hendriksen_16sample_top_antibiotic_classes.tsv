@@ -1,0 +1,35 @@
+rank	drug_class	total_mapped_reads_16samples
+1	macrolide antibiotic	308896
+2	tetracycline antibiotic	218243
+3	penicillin beta-lactam	149476
+4	fluoroquinolone antibiotic	141056
+5	aminoglycoside antibiotic	136354
+6	cephalosporin	131075
+7	phenicol antibiotic	109708
+8	streptogramin antibiotic	95528
+9	carbapenem	77526
+10	rifamycin antibiotic	74881
+11	diaminopyrimidine antibiotic	62302
+12	disinfecting agents and antiseptics	61317
+13	aminocoumarin antibiotic	56074
+14	lincosamide antibiotic	51969
+15	monobactam	43708
+16	peptide antibiotic	30720
+17	glycylcycline	22000
+18	streptogramin A antibiotic	11293
+19	streptogramin B antibiotic	10579
+20	sulfonamide antibiotic	9457
+21	pleuromutilin antibiotic	7419
+22	oxazolidinone antibiotic	6479
+23	nucleoside antibiotic	5178
+24	nitrofuran antibiotic	4976
+25	phosphonic acid antibiotic	4380
+26	mupirocin-like antibiotic	4119
+27	glycopeptide antibiotic	3063
+28	nitroimidazole antibiotic	2249
+29	isoniazid-like antibiotic	295
+30	antibiotic without defined classification	288
+31	fusidane antibiotic	132
+32	bicyclomycin-like antibiotic	127
+33	moenomycin antibiotic	33
+34	antibacterial free fatty acids	32
