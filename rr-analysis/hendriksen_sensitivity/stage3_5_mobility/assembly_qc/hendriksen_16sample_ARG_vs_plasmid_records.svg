@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<rect width="100%" height="100%" fill="white"/>
+<text x="600.0" y="35" text-anchor="middle" font-family="Arial" font-size="28" font-weight="700">ARG burden vs geNomAD plasmid-like contig records</text>
+<text x="600.0" y="65" text-anchor="middle" font-family="Arial" font-size="17">Hendriksen 16-sample benchmark: CARD/RGI mapped reads compared with geNomAD plasmid output</text>
+<line x1="130.0" y1="90" x2="130.0" y2="680" stroke="#e5e5e5"/>
+<text x="130.0" y="708" text-anchor="middle" font-family="Arial" font-size="13">0</text>
+<line x1="328.0" y1="90" x2="328.0" y2="680" stroke="#e5e5e5"/>
+<text x="328.0" y="708" text-anchor="middle" font-family="Arial" font-size="13">48,331</text>
+<line x1="526.0" y1="90" x2="526.0" y2="680" stroke="#e5e5e5"/>
+<text x="526.0" y="708" text-anchor="middle" font-family="Arial" font-size="13">96,662</text>
+<line x1="724.0" y1="90" x2="724.0" y2="680" stroke="#e5e5e5"/>
+<text x="724.0" y="708" text-anchor="middle" font-family="Arial" font-size="13">144,993</text>
+<line x1="922.0" y1="90" x2="922.0" y2="680" stroke="#e5e5e5"/>
+<text x="922.0" y="708" text-anchor="middle" font-family="Arial" font-size="13">193,324</text>
+<line x1="1120.0" y1="90" x2="1120.0" y2="680" stroke="#e5e5e5"/>
+<text x="1120.0" y="708" text-anchor="middle" font-family="Arial" font-size="13">241,655</text>
+<line x1="130" y1="680.0" x2="1120" y2="680.0" stroke="#e5e5e5"/>
+<text x="115" y="685.0" text-anchor="end" font-family="Arial" font-size="13">0</text>
+<line x1="130" y1="562.0" x2="1120" y2="562.0" stroke="#e5e5e5"/>
+<text x="115" y="567.0" text-anchor="end" font-family="Arial" font-size="13">945</text>
+<line x1="130" y1="444.0" x2="1120" y2="444.0" stroke="#e5e5e5"/>
+<text x="115" y="449.0" text-anchor="end" font-family="Arial" font-size="13">1,890</text>
+<line x1="130" y1="326.0" x2="1120" y2="326.0" stroke="#e5e5e5"/>
+<text x="115" y="331.0" text-anchor="end" font-family="Arial" font-size="13">2,835</text>
+<line x1="130" y1="208.0" x2="1120" y2="208.0" stroke="#e5e5e5"/>
+<text x="115" y="213.0" text-anchor="end" font-family="Arial" font-size="13">3,780</text>
+<line x1="130" y1="90.0" x2="1120" y2="90.0" stroke="#e5e5e5"/>
+<text x="115" y="95.0" text-anchor="end" font-family="Arial" font-size="13">4,726</text>
+<line x1="130" y1="680" x2="1120" y2="680" stroke="black" stroke-width="2"/>
+<line x1="130" y1="90" x2="130" y2="680" stroke="black" stroke-width="2"/>
+<text x="625.0" y="760" text-anchor="middle" font-family="Arial" font-size="18">Total CARD/RGI ARG mapped reads</text>
+<text x="30" y="385.0" text-anchor="middle" font-family="Arial" font-size="18" transform="rotate(-90 30 385.0)">geNomAD plasmid-like records</text>
+<circle cx="1120.0" cy="241.6" r="9" fill="#4f77b5" fill-opacity="0.85" stroke="black" stroke-width="0.7"/>
+<text x="1130.0" y="233.6" font-family="Arial" font-size="11">ERR1713331</text>
+<circle cx="409.3" cy="526.3" r="9" fill="#4f77b5" fill-opacity="0.85" stroke="black" stroke-width="0.7"/>
+<text x="419.3" y="518.3" font-family="Arial" font-size="11">ERR1713332</text>
+<circle cx="481.8" cy="430.7" r="9" fill="#4f77b5" fill-opacity="0.85" stroke="black" stroke-width="0.7"/>
+<text x="491.8" y="422.7" font-family="Arial" font-size="11">ERR1713334</text>
+<circle cx="518.0" cy="582.5" r="9" fill="#4f77b5" fill-opacity="0.85" stroke="black" stroke-width="0.7"/>
+<text x="528.0" y="574.5" font-family="Arial" font-size="11">ERR1713337</text>
+<circle cx="165.9" cy="660.2" r="9" fill="#4f77b5" fill-opacity="0.85" stroke="black" stroke-width="0.7"/>
+<text x="175.9" y="652.2" font-family="Arial" font-size="11">ERR1713339</text>
+<circle cx="629.7" cy="438.9" r="9" fill="#4f77b5" fill-opacity="0.85" stroke="black" stroke-width="0.7"/>
+<text x="639.7" y="430.9" font-family="Arial" font-size="11">ERR1713344</text>
+<circle cx="452.3" cy="493.7" r="9" fill="#4f77b5" fill-opacity="0.85" stroke="black" stroke-width="0.7"/>
+<text x="462.3" y="485.7" font-family="Arial" font-size="11">ERR1725947</text>
+<circle cx="219.5" cy="614.6" r="9" fill="#4f77b5" fill-opacity="0.85" stroke="black" stroke-width="0.7"/>
+<text x="229.5" y="606.6" font-family="Arial" font-size="11">ERR1725962</text>
+<circle cx="1070.9" cy="90.0" r="9" fill="#5e9f49" fill-opacity="0.85" stroke="black" stroke-width="0.7"/>
+<text x="1080.9" y="82.0" font-family="Arial" font-size="11">ERR1713350</text>
+<circle cx="457.6" cy="499.1" r="9" fill="#5e9f49" fill-opacity="0.85" stroke="black" stroke-width="0.7"/>
+<text x="467.6" y="491.1" font-family="Arial" font-size="11">ERR1713354</text>
+<circle cx="923.8" cy="339.6" r="9" fill="#5e9f49" fill-opacity="0.85" stroke="black" stroke-width="0.7"/>
+<text x="933.8" y="331.6" font-family="Arial" font-size="11">ERR1713355</text>
+<circle cx="862.4" cy="423.1" r="9" fill="#5e9f49" fill-opacity="0.85" stroke="black" stroke-width="0.7"/>
+<text x="872.4" y="415.1" font-family="Arial" font-size="11">ERR1713359</text>
+<circle cx="166.3" cy="666.6" r="9" fill="#5e9f49" fill-opacity="0.85" stroke="black" stroke-width="0.7"/>
+<text x="176.3" y="658.6" font-family="Arial" font-size="11">ERR1713361</text>
+<circle cx="797.6" cy="410.0" r="9" fill="#5e9f49" fill-opacity="0.85" stroke="black" stroke-width="0.7"/>
+<text x="807.6" y="402.0" font-family="Arial" font-size="11">ERR1713362</text>
+<circle cx="509.5" cy="467.3" r="9" fill="#5e9f49" fill-opacity="0.85" stroke="black" stroke-width="0.7"/>
+<text x="519.5" y="459.3" font-family="Arial" font-size="11">ERR1713365</text>
+<circle cx="837.3" cy="386.6" r="9" fill="#5e9f49" fill-opacity="0.85" stroke="black" stroke-width="0.7"/>
+<text x="847.3" y="378.6" font-family="Arial" font-size="11">ERR1713369</text>
+<circle cx="940" cy="105" r="8" fill="#4f77b5"/><text x="955" y="110" font-family="Arial" font-size="14">pilot8</text>
+<circle cx="1030" cy="105" r="8" fill="#5e9f49"/><text x="1045" y="110" font-family="Arial" font-size="14">selected8</text>
+<text x="130" y="782" font-family="Arial" font-size="14" fill="#555">Interpretation: preliminary sample-level relationship only; this does not yet prove ARGs are on plasmid contigs. Pearson r = 0.92</text>
+</svg>

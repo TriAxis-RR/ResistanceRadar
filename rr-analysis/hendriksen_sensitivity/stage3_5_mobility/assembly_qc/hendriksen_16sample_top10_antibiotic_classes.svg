@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="100%" height="100%" fill="white"/>
+<text x="600.0" y="38" text-anchor="middle" font-family="Arial" font-size="26" font-weight="bold">Top antibiotic resistance-associated classes</text>
+<text x="600.0" y="65" text-anchor="middle" font-family="Arial" font-size="15" fill="#444">CARD/RGI mapped reads across 16 Hendriksen samples: pilot8 + selected8</text>
+<line x1="330" y1="90" x2="330" y2="640" stroke="black" stroke-width="1.3"/>
+<line x1="330" y1="640" x2="1130" y2="640" stroke="black" stroke-width="1.3"/>
+<line x1="330.0" y1="90" x2="330.0" y2="640" stroke="#e6e6e6"/>
+<line x1="330.0" y1="640" x2="330.0" y2="646" stroke="black"/>
+<text x="330.0" y="666" text-anchor="middle" font-family="Arial" font-size="12">0</text>
+<line x1="490.0" y1="90" x2="490.0" y2="640" stroke="#e6e6e6"/>
+<line x1="490.0" y1="640" x2="490.0" y2="646" stroke="black"/>
+<text x="490.0" y="666" text-anchor="middle" font-family="Arial" font-size="12">61,779</text>
+<line x1="650.0" y1="90" x2="650.0" y2="640" stroke="#e6e6e6"/>
+<line x1="650.0" y1="640" x2="650.0" y2="646" stroke="black"/>
+<text x="650.0" y="666" text-anchor="middle" font-family="Arial" font-size="12">123,558</text>
+<line x1="810.0" y1="90" x2="810.0" y2="640" stroke="#e6e6e6"/>
+<line x1="810.0" y1="640" x2="810.0" y2="646" stroke="black"/>
+<text x="810.0" y="666" text-anchor="middle" font-family="Arial" font-size="12">185,337</text>
+<line x1="970.0" y1="90" x2="970.0" y2="640" stroke="#e6e6e6"/>
+<line x1="970.0" y1="640" x2="970.0" y2="646" stroke="black"/>
+<text x="970.0" y="666" text-anchor="middle" font-family="Arial" font-size="12">247,116</text>
+<line x1="1130.0" y1="90" x2="1130.0" y2="640" stroke="#e6e6e6"/>
+<line x1="1130.0" y1="640" x2="1130.0" y2="646" stroke="black"/>
+<text x="1130.0" y="666" text-anchor="middle" font-family="Arial" font-size="12">308,896</text>
+<text x="730.0" y="698" text-anchor="middle" font-family="Arial" font-size="15">Total CARD/RGI mapped reads across 16 samples</text>
+<text x="316" y="116.2" text-anchor="end" font-family="Arial" font-size="15">macrolide antibiotic</text>
+<rect x="330" y="90.0" width="800.0" height="42.4" fill="#5f7faf" rx="3" ry="3"/>
+<text x="1138.0" y="116.2" text-anchor="start" font-family="Arial" font-size="13" fill="#222">308,896</text>
+<text x="316" y="172.6" text-anchor="end" font-family="Arial" font-size="15">tetracycline antibiotic</text>
+<rect x="330" y="146.4" width="565.2" height="42.4" fill="#5f7faf" rx="3" ry="3"/>
+<text x="903.2" y="172.6" text-anchor="start" font-family="Arial" font-size="13" fill="#222">218,243</text>
+<text x="316" y="229.0" text-anchor="end" font-family="Arial" font-size="15">penicillin beta-lactam</text>
+<rect x="330" y="202.8" width="387.1" height="42.4" fill="#5f7faf" rx="3" ry="3"/>
+<text x="725.1" y="229.0" text-anchor="start" font-family="Arial" font-size="13" fill="#222">149,476</text>
+<text x="316" y="285.4" text-anchor="end" font-family="Arial" font-size="15">fluoroquinolone antibiotic</text>
+<rect x="330" y="259.2" width="365.3" height="42.4" fill="#5f7faf" rx="3" ry="3"/>
+<text x="703.3" y="285.4" text-anchor="start" font-family="Arial" font-size="13" fill="#222">141,056</text>
+<text x="316" y="341.8" text-anchor="end" font-family="Arial" font-size="15">aminoglycoside antibiotic</text>
+<rect x="330" y="315.6" width="353.1" height="42.4" fill="#5f7faf" rx="3" ry="3"/>
+<text x="691.1" y="341.8" text-anchor="start" font-family="Arial" font-size="13" fill="#222">136,354</text>
+<text x="316" y="398.2" text-anchor="end" font-family="Arial" font-size="15">cephalosporin</text>
+<rect x="330" y="372.0" width="339.5" height="42.4" fill="#5f7faf" rx="3" ry="3"/>
+<text x="677.5" y="398.2" text-anchor="start" font-family="Arial" font-size="13" fill="#222">131,075</text>
+<text x="316" y="454.6" text-anchor="end" font-family="Arial" font-size="15">phenicol antibiotic</text>
+<rect x="330" y="428.4" width="284.1" height="42.4" fill="#5f7faf" rx="3" ry="3"/>
+<text x="622.1" y="454.6" text-anchor="start" font-family="Arial" font-size="13" fill="#222">109,708</text>
+<text x="316" y="511.0" text-anchor="end" font-family="Arial" font-size="15">streptogramin antibiotic</text>
+<rect x="330" y="484.8" width="247.4" height="42.4" fill="#5f7faf" rx="3" ry="3"/>
+<text x="585.4" y="511.0" text-anchor="start" font-family="Arial" font-size="13" fill="#222">95,528</text>
+<text x="316" y="567.4" text-anchor="end" font-family="Arial" font-size="15">carbapenem</text>
+<rect x="330" y="541.2" width="200.8" height="42.4" fill="#5f7faf" rx="3" ry="3"/>
+<text x="538.8" y="567.4" text-anchor="start" font-family="Arial" font-size="13" fill="#222">77,526</text>
+<text x="316" y="623.8" text-anchor="end" font-family="Arial" font-size="15">rifamycin antibiotic</text>
+<rect x="330" y="597.6" width="193.9" height="42.4" fill="#5f7faf" rx="3" ry="3"/>
+<text x="531.9" y="623.8" text-anchor="start" font-family="Arial" font-size="13" fill="#222">74,881</text>
+<text x="330" y="715" text-anchor="start" font-family="Arial" font-size="12" fill="#666">Interpretation: metagenomic resistance-associated gene signals, not clinical susceptibility calls.</text>
+</svg>

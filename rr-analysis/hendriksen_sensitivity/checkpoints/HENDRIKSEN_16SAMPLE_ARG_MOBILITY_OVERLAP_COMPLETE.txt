@@ -1,0 +1,26 @@
+Checkpoint: HENDRIKSEN_16SAMPLE_ARG_MOBILITY_OVERLAP_COMPLETE
+
+Samples:
+16 Hendriksen benchmark samples
+
+Completed stages:
+FASTP
+Bowtie2 decontamination
+CARD/RGI BWT read-level ARG profiling
+MEGAHIT assembly
+geNomAD contig mobility classification
+RGI main on MEGAHIT contigs
+ARG × mobility overlap table generation
+
+Key outputs:
+rr-analysis/hendriksen_sensitivity/stage3_5_mobility/arg_mobility_overlap/hendriksen_16sample_ARG_mobility_sample_summary.tsv
+rr-analysis/hendriksen_sensitivity/stage3_5_mobility/arg_mobility_overlap/hendriksen_16sample_ARG_mobility_sample_summary_strict_perfect.tsv
+rr-analysis/hendriksen_sensitivity/stage3_5_mobility/arg_mobility_overlap/hendriksen_16sample_ARG_mobility_drug_class_summary.tsv
+rr-analysis/hendriksen_sensitivity/stage3_5_mobility/arg_mobility_overlap/hendriksen_16sample_strict_perfect_mobile_ARG_fraction.svg
+
+Large output not intended for Git:
+rr-analysis/hendriksen_sensitivity/stage3_5_mobility/arg_mobility_overlap/hendriksen_16sample_ARG_mobility_overlap.tsv
+
+Interpretation:
+This stage links contig-level ARG calls to geNomAD chromosome-like, plasmid-like, and virus-like classifications.
+The Strict + Perfect summary provides the higher-confidence ARG mobility feature table for downstream ML feature engineering.
