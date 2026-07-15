@@ -1,0 +1,54 @@
+#!/bin/bash
+#BSUB -J KATH_FASTP_B02[1-7]%2
+#BSUB -q single_chassis
+#BSUB -n 4
+#BSUB -R "rusage[mem=16]"
+#BSUB -W 8:00
+#BSUB -o rr-analysis/kathmandu_kbase/logs/KATH_FASTP_B02_%I_%J.out
+#BSUB -e rr-analysis/kathmandu_kbase/logs/KATH_FASTP_B02_%I_%J.err
+
+set -euo pipefail
+
+cd /rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline
+
+source /usr/local/apps/miniconda20240526/etc/profile.d/conda.sh
+conda activate /rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_meta
+
+SAMPLE_SHEET="rr-analysis/kathmandu_kbase/metadata/kathmandu_batch02_7sample_fastp_samples.tsv"
+
+LINE=$(awk -v IDX="$LSB_JOBINDEX" 'NR==IDX+1 {print}' "$SAMPLE_SHEET")
+
+SAMPLE=$(echo "$LINE" | cut -f1)
+MATRIX=$(echo "$LINE" | cut -f2)
+R1=$(echo "$LINE" | cut -f3)
+R2=$(echo "$LINE" | cut -f4)
+OUT_DIR=$(echo "$LINE" | cut -f5)
+
+mkdir -p "$OUT_DIR"
+mkdir -p rr-analysis/kathmandu_kbase/checkpoints
+mkdir -p rr-analysis/kathmandu_kbase/logs
+
+echo "=== Kathmandu batch02 FASTP ==="
+echo "Sample: $SAMPLE"
+echo "Matrix: $MATRIX"
+echo "R1: $R1"
+echo "R2: $R2"
+echo "Output: $OUT_DIR"
+echo "Host: $(hostname)"
+echo "Start: $(date)"
+echo
+
+fastp \
+  -i "$R1" \
+  -I "$R2" \
+  -o "$OUT_DIR/${SAMPLE}_fastp_R1.fastq.gz" \
+  -O "$OUT_DIR/${SAMPLE}_fastp_R2.fastq.gz" \
+  -h "$OUT_DIR/${SAMPLE}_fastp.html" \
+  -j "$OUT_DIR/${SAMPLE}_fastp.json" \
+  -w 4
+
+touch "rr-analysis/kathmandu_kbase/checkpoints/${SAMPLE}_BATCH02_FASTP_COMPLETE.txt"
+
+echo
+echo "Done: $SAMPLE"
+echo "End: $(date)"

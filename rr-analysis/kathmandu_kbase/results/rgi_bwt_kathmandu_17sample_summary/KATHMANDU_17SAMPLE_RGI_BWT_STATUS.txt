@@ -1,0 +1,45 @@
+Kathmandu/Nepal RGI BWT status
+
+Date: 2026-07-15
+
+Completed through RGI BWT:
+17 samples total
+
+Included:
+Batch01 completed samples:
+E_3-4
+I_3-4
+
+Batch02 ready15 completed samples:
+E_5-6
+I_7-8
+I_9-10
+RW_2
+RW_5
+RW_6
+E_1-2
+E_7-8
+E_9-10
+E_11-12
+I_1-2
+I_11-12
+RW_1
+RW_3
+RW_4
+
+Not included yet:
+I_5-6
+
+Reason:
+I_5-6 completed split-only preprocessing and Bowtie2 decontamination. Its one-sample RGI BWT job was submitted separately and was still running/pending at the time of this 17-sample checkpoint.
+
+Pipeline completed for these 17 samples:
+FASTP/split preprocessing
+Bowtie2 decontamination
+CARD/RGI BWT read-level ARG profiling
+
+Primary RGI BWT outputs tracked:
+*_rgi_bwt.overall_mapping_stats.txt
+*_rgi_bwt.gene_mapping_data.txt
+
+Large FASTQ files, Bowtie2 decontaminated FASTQ files, databases, indexes, and heavy intermediate files are retained on HPC and should not be pushed to GitHub.

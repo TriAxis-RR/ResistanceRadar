@@ -1,0 +1,83 @@
+#!/bin/bash
+#BSUB -J "KATH_RGI_BWT_B01[1-2]%2"
+#BSUB -q single_chassis
+#BSUB -n 4
+#BSUB -R "span[hosts=1]"
+#BSUB -R "rusage[mem=48GB]"
+#BSUB -W 72:00
+#BSUB -o rr-analysis/kathmandu_kbase/results/rgi_bwt_batch01_2sample/logs/KATH_RGI_BWT_B01_%I_%J.out
+#BSUB -e rr-analysis/kathmandu_kbase/results/rgi_bwt_batch01_2sample/logs/KATH_RGI_BWT_B01_%I_%J.err
+
+set -euo pipefail
+
+REPO="/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline"
+SAMPLESHEET="${REPO}/rr-analysis/kathmandu_kbase/metadata/kathmandu_batch01_2sample_cardrgi_samples.tsv"
+
+RGI="/rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_rgi/bin/rgi"
+export PATH="/rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_rgi/bin:${PATH}"
+CARD_DIR="/rsstu/users/s/sleblan/MismatchRepair/Project/references/card"
+
+OUTDIR="${REPO}/rr-analysis/kathmandu_kbase/results/rgi_bwt_batch01_2sample"
+mkdir -p "${OUTDIR}/logs"
+
+LINE=$(awk -F'\t' -v n="${LSB_JOBINDEX}" 'NR==n+1 {print}' "${SAMPLESHEET}")
+
+if [[ -z "${LINE}" ]]; then
+    echo "No samplesheet line found for LSB_JOBINDEX=${LSB_JOBINDEX}"
+    exit 1
+fi
+
+IFS=$'\t' read -r SAMPLE_ID READ1 READ2 <<< "${LINE}"
+
+if [[ "${READ1}" != /* ]]; then
+  READ1="${REPO}/${READ1}"
+fi
+
+if [[ "${READ2}" != /* ]]; then
+  READ2="${REPO}/${READ2}"
+fi
+
+echo "========================================="
+echo "Kathmandu/Nepal batch01 2-sample CARD/RGI BWT"
+echo "Date: $(date)"
+echo "Array index: ${LSB_JOBINDEX}"
+echo "Sample ID: ${SAMPLE_ID}"
+echo "Read1: ${READ1}"
+echo "Read2: ${READ2}"
+echo "Output prefix: ${OUTDIR}/${SAMPLE_ID}_rgi_bwt"
+echo "========================================="
+
+if [[ ! -s "${READ1}" ]]; then
+    echo "Missing READ1: ${READ1}"
+    exit 1
+fi
+
+if [[ ! -s "${READ2}" ]]; then
+    echo "Missing READ2: ${READ2}"
+    exit 1
+fi
+
+echo
+echo "Checking CARD local database..."
+cd "${CARD_DIR}"
+"${RGI}" database -v --local
+
+echo
+echo "Running RGI BWT..."
+"${RGI}" bwt \
+  -1 "${READ1}" \
+  -2 "${READ2}" \
+  -a kma \
+  -n 4 \
+  -o "${OUTDIR}/${SAMPLE_ID}_rgi_bwt" \
+  --local \
+  --clean
+
+echo
+echo "Checking expected RGI outputs..."
+ls -lh "${OUTDIR}/${SAMPLE_ID}_rgi_bwt.overall_mapping_stats.txt"
+ls -lh "${OUTDIR}/${SAMPLE_ID}_rgi_bwt.gene_mapping_data.txt"
+
+echo
+echo "Completed RGI BWT sample: ${SAMPLE_ID}"
+echo "Date: $(date)"

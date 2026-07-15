@@ -1,0 +1,56 @@
+#!/bin/bash
+#BSUB -J KATH_FASTP_B02_INT_RERUN_RW4[10]%1
+#BSUB -q single_chassis
+#BSUB -n 4
+#BSUB -R "rusage[mem=16]"
+#BSUB -W 36:00
+#BSUB -o rr-analysis/kathmandu_kbase/logs/KATH_FASTP_B02_INT_RERUN_RW4_%I_%J.out
+#BSUB -e rr-analysis/kathmandu_kbase/logs/KATH_FASTP_B02_INT_RERUN_RW4_%I_%J.err
+
+set -euo pipefail
+
+cd /rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline
+
+source /usr/local/apps/miniconda20240526/etc/profile.d/conda.sh
+conda activate /rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_meta
+
+SAMPLE_SHEET="rr-analysis/kathmandu_kbase/metadata/kathmandu_batch02_10sample_interleaved_fastp_samples.tsv"
+
+LINE=$(awk -v IDX="$LSB_JOBINDEX" 'NR==IDX+1 {print}' "$SAMPLE_SHEET")
+
+SAMPLE=$(echo "$LINE" | cut -f1)
+MATRIX=$(echo "$LINE" | cut -f2)
+ZIP_PATH=$(echo "$LINE" | cut -f3)
+OUT_DIR=$(echo "$LINE" | cut -f4)
+
+mkdir -p "$OUT_DIR"
+mkdir -p rr-analysis/kathmandu_kbase/checkpoints
+mkdir -p rr-analysis/kathmandu_kbase/logs
+
+echo "=== Kathmandu batch02 interleaved ZIP FASTP/split ==="
+echo "Sample: $SAMPLE"
+echo "Matrix: $MATRIX"
+echo "ZIP: $ZIP_PATH"
+echo "Output: $OUT_DIR"
+echo "Host: $(hostname)"
+echo "Start: $(date)"
+echo
+
+echo "ZIP contents:"
+unzip -l "$ZIP_PATH"
+echo
+
+unzip -p "$ZIP_PATH" | fastp \
+  --stdin \
+  --interleaved_in \
+  --out1 "$OUT_DIR/${SAMPLE}_fastp_R1.fastq.gz" \
+  --out2 "$OUT_DIR/${SAMPLE}_fastp_R2.fastq.gz" \
+  --html "$OUT_DIR/${SAMPLE}_fastp.html" \
+  --json "$OUT_DIR/${SAMPLE}_fastp.json" \
+  --thread 4
+
+touch "rr-analysis/kathmandu_kbase/checkpoints/${SAMPLE}_BATCH02_INTERLEAVED_FASTP_COMPLETE.txt"
+
+echo
+echo "Done: $SAMPLE"
+echo "End: $(date)"

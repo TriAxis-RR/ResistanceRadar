@@ -1,0 +1,83 @@
+#!/bin/bash
+#BSUB -J KATH_SPLIT_I56
+#BSUB -q single_chassis
+#BSUB -n 2
+#BSUB -R "rusage[mem=16]"
+#BSUB -W 36:00
+#BSUB -o rr-analysis/kathmandu_kbase/logs/KATH_SPLIT_I56_%J.out
+#BSUB -e rr-analysis/kathmandu_kbase/logs/KATH_SPLIT_I56_%J.err
+
+set -euo pipefail
+
+cd /rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline
+
+source /usr/local/apps/miniconda20240526/etc/profile.d/conda.sh
+conda activate /rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_meta
+
+SAMPLE="I_5-6"
+ZIP_PATH="rr-analysis/kathmandu_kbase/kbase_clean_reads/batch02/I_5_6_clean_reads_256529_78_1.FASTQ.zip"
+OUT_DIR="rr-analysis/kathmandu_kbase/results/fastp_batch02_interleaved_10sample/I_5-6"
+
+mkdir -p "$OUT_DIR"
+mkdir -p rr-analysis/kathmandu_kbase/checkpoints
+mkdir -p rr-analysis/kathmandu_kbase/logs
+
+R1="$OUT_DIR/${SAMPLE}_fastp_R1.fastq.gz"
+R2="$OUT_DIR/${SAMPLE}_fastp_R2.fastq.gz"
+
+echo "=== Split-only interleaved ZIP job ==="
+echo "Sample: $SAMPLE"
+echo "ZIP: $ZIP_PATH"
+echo "R1: $R1"
+echo "R2: $R2"
+echo "Host: $(hostname)"
+echo "Start: $(date)"
+echo
+
+python - <<'PY'
+import gzip
+import zipfile
+from pathlib import Path
+
+zip_path = Path("rr-analysis/kathmandu_kbase/kbase_clean_reads/batch02/I_5_6_clean_reads_256529_78_1.FASTQ.zip")
+out_dir = Path("rr-analysis/kathmandu_kbase/results/fastp_batch02_interleaved_10sample/I_5-6")
+sample = "I_5-6"
+
+r1_path = out_dir / f"{sample}_fastp_R1.fastq.gz"
+r2_path = out_dir / f"{sample}_fastp_R2.fastq.gz"
+
+with zipfile.ZipFile(zip_path) as z:
+    names = z.namelist()
+    if len(names) != 1:
+        raise RuntimeError(f"Expected one FASTQ inside ZIP, found {len(names)}: {names}")
+    member = names[0]
+    print(f"ZIP member: {member}", flush=True)
+
+    n_pairs = 0
+    with z.open(member, "r") as fin, gzip.open(r1_path, "wb", compresslevel=6) as r1, gzip.open(r2_path, "wb", compresslevel=6) as r2:
+        while True:
+            r1_block = [fin.readline() for _ in range(4)]
+            if not r1_block[0]:
+                break
+            r2_block = [fin.readline() for _ in range(4)]
+
+            if any(line == b"" for line in r1_block + r2_block):
+                raise RuntimeError(f"Truncated FASTQ pair at pair {n_pairs + 1}")
+
+            for line in r1_block:
+                r1.write(line)
+            for line in r2_block:
+                r2.write(line)
+
+            n_pairs += 1
+            if n_pairs % 5_000_000 == 0:
+                print(f"Processed {n_pairs:,} read pairs", flush=True)
+
+print(f"Completed split: {n_pairs:,} read pairs", flush=True)
+PY
+
+touch "rr-analysis/kathmandu_kbase/checkpoints/${SAMPLE}_BATCH02_INTERLEAVED_FASTP_COMPLETE.txt"
+
+echo
+echo "Done: $SAMPLE"
+echo "End: $(date)"

@@ -1,0 +1,2 @@
+sample_id	matrix	source_group	R1	R2	out_dir
+I_5-6	influent	batch02_interleaved_split_only	rr-analysis/kathmandu_kbase/results/fastp_batch02_interleaved_10sample/I_5-6/I_5-6_fastp_R1.fastq.gz	rr-analysis/kathmandu_kbase/results/fastp_batch02_interleaved_10sample/I_5-6/I_5-6_fastp_R2.fastq.gz	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_I_5-6/I_5-6
