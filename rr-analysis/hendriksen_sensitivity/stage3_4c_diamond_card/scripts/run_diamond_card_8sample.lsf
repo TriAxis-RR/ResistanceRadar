@@ -1,0 +1,79 @@
+#!/bin/bash
+#BSUB -J "diamond34c[1-8]"
+#BSUB -q single_chassis
+#BSUB -n 8
+#BSUB -R "span[hosts=1]"
+#BSUB -R "rusage[mem=8]"
+#BSUB -M 64
+#BSUB -W 24:00
+#BSUB -o rr-analysis/hendriksen_sensitivity/stage3_4c_diamond_card/logs/diamond34c_%I.out
+#BSUB -e rr-analysis/hendriksen_sensitivity/stage3_4c_diamond_card/logs/diamond34c_%I.err
+
+set -euo pipefail
+
+cd /rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline
+
+source /usr/local/apps/miniconda20240526/etc/profile.d/conda.sh
+conda activate /rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_meta
+
+STAGE34C="rr-analysis/hendriksen_sensitivity/stage3_4c_diamond_card"
+SHEET="$STAGE34C/samplesheets/hendriksen_8sample_diamond_card_samples.tsv"
+DB="$STAGE34C/db/CARD_v4.0.1_protein_models_combined"
+OUTROOT="$STAGE34C/results"
+
+sample_id=$(awk -v i="$LSB_JOBINDEX" 'NR==i+1 {print $1}' "$SHEET")
+r1=$(awk -v i="$LSB_JOBINDEX" 'NR==i+1 {print $2}' "$SHEET")
+r2=$(awk -v i="$LSB_JOBINDEX" 'NR==i+1 {print $3}' "$SHEET")
+
+OUTDIR="$OUTROOT/$sample_id"
+mkdir -p "$OUTDIR"
+
+echo "Task index: $LSB_JOBINDEX"
+echo "Sample: $sample_id"
+echo "R1: $r1"
+echo "R2: $r2"
+echo "DB: $DB"
+echo "OUTDIR: $OUTDIR"
+echo "DIAMOND version:"
+diamond version
+
+diamond blastx \
+  --db "$DB" \
+  --query "$r1" \
+  --out "$OUTDIR/${sample_id}_R1_diamond_card.tsv" \
+  --outfmt 6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen \
+  --evalue 1e-5 \
+  --id 80 \
+  --query-cover 50 \
+  --subject-cover 50 \
+  --max-target-seqs 1 \
+  --threads 8 \
+  --sensitive
+
+diamond blastx \
+  --db "$DB" \
+  --query "$r2" \
+  --out "$OUTDIR/${sample_id}_R2_diamond_card.tsv" \
+  --outfmt 6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore qlen slen \
+  --evalue 1e-5 \
+  --id 80 \
+  --query-cover 50 \
+  --subject-cover 50 \
+  --max-target-seqs 1 \
+  --threads 8 \
+  --sensitive
+
+cat "$OUTDIR/${sample_id}_R1_diamond_card.tsv" \
+    "$OUTDIR/${sample_id}_R2_diamond_card.tsv" \
+    > "$OUTDIR/${sample_id}_diamond_card_merged.tsv"
+
+echo "R1 hits:"
+wc -l "$OUTDIR/${sample_id}_R1_diamond_card.tsv"
+
+echo "R2 hits:"
+wc -l "$OUTDIR/${sample_id}_R2_diamond_card.tsv"
+
+echo "Merged hits:"
+wc -l "$OUTDIR/${sample_id}_diamond_card_merged.tsv"
+
+echo "DONE: $sample_id"

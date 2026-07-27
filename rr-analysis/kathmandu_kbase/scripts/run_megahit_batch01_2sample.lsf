@@ -1,0 +1,65 @@
+#!/bin/bash
+#BSUB -J KATH_MEGAHIT_B01[1-2]%1
+#BSUB -q single_chassis
+#BSUB -n 8
+#BSUB -R "rusage[mem=64]"
+#BSUB -W 24:00
+#BSUB -o rr-analysis/kathmandu_kbase/results/megahit_batch01_2sample/logs/KATH_MEGAHIT_B01_%I_%J.out
+#BSUB -e rr-analysis/kathmandu_kbase/results/megahit_batch01_2sample/logs/KATH_MEGAHIT_B01_%I_%J.err
+
+set -euo pipefail
+
+source /usr/local/apps/miniconda20240526/etc/profile.d/conda.sh
+conda activate /rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_mobility
+
+export PATH="/rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_mobility/bin:${PATH}"
+
+SAMPLE_SHEET="rr-analysis/kathmandu_kbase/metadata/kathmandu_batch01_2sample_megahit_samples.tsv"
+LINE_NUM=$((LSB_JOBINDEX + 1))
+
+SAMPLE=$(awk -v line="$LINE_NUM" 'NR==line {print $1}' "$SAMPLE_SHEET")
+MATRIX=$(awk -v line="$LINE_NUM" 'NR==line {print $2}' "$SAMPLE_SHEET")
+R1=$(awk -v line="$LINE_NUM" 'NR==line {print $3}' "$SAMPLE_SHEET")
+R2=$(awk -v line="$LINE_NUM" 'NR==line {print $4}' "$SAMPLE_SHEET")
+OUT_DIR=$(awk -v line="$LINE_NUM" 'NR==line {print $5}' "$SAMPLE_SHEET")
+
+mkdir -p rr-analysis/kathmandu_kbase/checkpoints
+
+echo "=== Kathmandu MEGAHIT assembly ==="
+echo "Sample: $SAMPLE"
+echo "Matrix: $MATRIX"
+echo "R1: $R1"
+echo "R2: $R2"
+echo "Output: $OUT_DIR"
+echo "Host: $(hostname)"
+echo "Start: $(date)"
+echo
+
+if [ ! -s "$R1" ]; then
+  echo "ERROR: R1 missing or empty: $R1" >&2
+  exit 1
+fi
+
+if [ ! -s "$R2" ]; then
+  echo "ERROR: R2 missing or empty: $R2" >&2
+  exit 1
+fi
+
+if [ -d "$OUT_DIR" ]; then
+  echo "Removing existing output directory: $OUT_DIR"
+  rm -rf "$OUT_DIR"
+fi
+
+megahit \
+  -1 "$R1" \
+  -2 "$R2" \
+  --out-dir "$OUT_DIR" \
+  --out-prefix "$SAMPLE" \
+  --min-contig-len 1000 \
+  --num-cpu-threads 8
+
+echo
+echo "Finished MEGAHIT for $SAMPLE"
+echo "End: $(date)"
+
+touch "rr-analysis/kathmandu_kbase/checkpoints/${SAMPLE}_MEGAHIT_COMPLETE.txt"

@@ -1,0 +1,102 @@
+#!/bin/bash
+#BSUB -J "KATH_DIAMOND_CARD_I56"
+#BSUB -q single_chassis
+#BSUB -n 4
+#BSUB -R "span[hosts=1]"
+#BSUB -R "rusage[mem=32GB]"
+#BSUB -W 48:00
+#BSUB -o rr-analysis/kathmandu_kbase/stage3_4c_diamond_card/logs/KATH_DIAMOND_CARD_I56_%J.out
+#BSUB -e rr-analysis/kathmandu_kbase/stage3_4c_diamond_card/logs/KATH_DIAMOND_CARD_I56_%J.err
+
+set -euo pipefail
+
+REPO="/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline"
+SAMPLESHEET="${REPO}/rr-analysis/kathmandu_kbase/stage3_4c_diamond_card/samplesheets/kathmandu_I_5-6_diamond_card_sample.tsv"
+
+DIAMOND="/rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_meta/bin/diamond"
+DB="/rsstu/users/s/sleblan/MismatchRepair/Project/references/card/diamond/card_protein_homolog_model.dmnd"
+
+OUTDIR="${REPO}/rr-analysis/kathmandu_kbase/stage3_4c_diamond_card/results_cleanfasta_I_5-6"
+CHECKDIR="${REPO}/rr-analysis/kathmandu_kbase/checkpoints"
+
+mkdir -p "${OUTDIR}" "${CHECKDIR}"
+
+LINE=$(awk -F'\t' 'NR==2 {print}' "${SAMPLESHEET}")
+
+if [[ -z "${LINE}" ]]; then
+    echo "No sample found in ${SAMPLESHEET}"
+    exit 1
+fi
+
+IFS=$'\t' read -r SAMPLE_ID BATCH READ1 READ2 <<< "${LINE}"
+
+if [[ "${READ1}" != /* ]]; then
+    READ1="${REPO}/${READ1}"
+fi
+
+if [[ "${READ2}" != /* ]]; then
+    READ2="${REPO}/${READ2}"
+fi
+
+SAMPLE_OUT="${OUTDIR}/${SAMPLE_ID}"
+mkdir -p "${SAMPLE_OUT}"
+
+QUERY_FASTA="${SAMPLE_OUT}/${SAMPLE_ID}_decontam_combined.fasta.gz"
+DIAMOND_OUT="${SAMPLE_OUT}/${SAMPLE_ID}_diamond_card_blastx.tsv"
+
+echo "=========================================="
+echo "Kathmandu Stage 3.4C DIAMOND/CARD I_5-6"
+echo "Date: $(date)"
+echo "Sample: ${SAMPLE_ID}"
+echo "Batch: ${BATCH}"
+echo "READ1: ${READ1}"
+echo "READ2: ${READ2}"
+echo "DB: ${DB}"
+echo "Output: ${DIAMOND_OUT}"
+echo "=========================================="
+
+if [[ ! -s "${READ1}" ]]; then
+    echo "Missing READ1: ${READ1}"
+    exit 1
+fi
+
+if [[ ! -s "${READ2}" ]]; then
+    echo "Missing READ2: ${READ2}"
+    exit 1
+fi
+
+if [[ ! -s "${DB}" ]]; then
+    echo "Missing DIAMOND DB: ${DB}"
+    exit 1
+fi
+
+echo
+echo "Converting paired FASTQ.gz to combined FASTA.gz..."
+{
+  zcat "${READ1}" | awk 'NR%4==1 {sub(/^@/,">"); print} NR%4==2 {print}'
+  zcat "${READ2}" | awk 'NR%4==1 {sub(/^@/,">"); print} NR%4==2 {print}'
+} | gzip -c > "${QUERY_FASTA}"
+
+echo "Query FASTA:"
+ls -lh "${QUERY_FASTA}"
+
+echo
+echo "Running DIAMOND blastx..."
+"${DIAMOND}" blastx \
+  --db "${DB}" \
+  --query "${QUERY_FASTA}" \
+  --out "${DIAMOND_OUT}" \
+  --outfmt 6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore \
+  --evalue 1e-5 \
+  --max-target-seqs 25 \
+  --threads 4
+
+echo
+echo "Checking output..."
+ls -lh "${DIAMOND_OUT}"
+
+touch "${CHECKDIR}/${SAMPLE_ID}_KATHMANDU_I56_DIAMOND_CARD_COMPLETE.txt"
+
+echo
+echo "Completed DIAMOND/CARD sample: ${SAMPLE_ID}"
+echo "Date: $(date)"

@@ -1,0 +1,95 @@
+#!/bin/bash
+#BSUB -J "KATH_MEGAHIT_REMAIN[1-17]%1"
+#BSUB -q single_chassis
+#BSUB -n 8
+#BSUB -R "span[hosts=1]"
+#BSUB -R "rusage[mem=96GB]"
+#BSUB -W 72:00
+#BSUB -o rr-analysis/kathmandu_kbase/logs/KATH_MEGAHIT_REMAIN_%I_%J.out
+#BSUB -e rr-analysis/kathmandu_kbase/logs/KATH_MEGAHIT_REMAIN_%I_%J.err
+
+set -euo pipefail
+
+REPO="/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline"
+SAMPLESHEET="${REPO}/rr-analysis/kathmandu_kbase/metadata/kathmandu_megahit_remaining_after_diamond_complete_samples.tsv"
+
+OUTROOT="${REPO}/rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete"
+CHECKDIR="${REPO}/rr-analysis/kathmandu_kbase/checkpoints"
+
+mkdir -p "${OUTROOT}" "${CHECKDIR}" "${REPO}/rr-analysis/kathmandu_kbase/logs"
+
+source /usr/local/apps/miniconda20240526/etc/profile.d/conda.sh
+conda activate /rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_meta
+
+LINE=$(awk -F'\t' -v IDX="${LSB_JOBINDEX}" 'NR==IDX+1 {print}' "${SAMPLESHEET}")
+
+if [[ -z "${LINE}" ]]; then
+    echo "No sample found for LSB_JOBINDEX=${LSB_JOBINDEX}"
+    exit 1
+fi
+
+IFS=$'\t' read -r SAMPLE_ID MATRIX SOURCE_GROUP READ1 READ2 <<< "${LINE}"
+
+if [[ "${READ1}" != /* ]]; then
+    READ1="${REPO}/${READ1}"
+fi
+
+if [[ "${READ2}" != /* ]]; then
+    READ2="${REPO}/${READ2}"
+fi
+
+SAMPLE_OUT="${OUTROOT}/${SAMPLE_ID}"
+CHECKFILE="${CHECKDIR}/${SAMPLE_ID}_MEGAHIT_COMPLETE.txt"
+
+echo "========================================="
+echo "Kathmandu MEGAHIT remaining"
+echo "Date: $(date)"
+echo "Sample: ${SAMPLE_ID}"
+echo "Matrix: ${MATRIX}"
+echo "Source group: ${SOURCE_GROUP}"
+echo "READ1: ${READ1}"
+echo "READ2: ${READ2}"
+echo "Output: ${SAMPLE_OUT}"
+echo "Checkpoint: ${CHECKFILE}"
+echo "========================================="
+
+if [[ -s "${CHECKFILE}" ]]; then
+    echo "Checkpoint already exists. Skipping ${SAMPLE_ID}."
+    exit 0
+fi
+
+if [[ ! -s "${READ1}" ]]; then
+    echo "Missing READ1: ${READ1}"
+    exit 1
+fi
+
+if [[ ! -s "${READ2}" ]]; then
+    echo "Missing READ2: ${READ2}"
+    exit 1
+fi
+
+rm -rf "${SAMPLE_OUT}.tmp"
+
+megahit \
+  -1 "${READ1}" \
+  -2 "${READ2}" \
+  -o "${SAMPLE_OUT}.tmp" \
+  --out-prefix "${SAMPLE_ID}" \
+  -t 8 \
+  --min-contig-len 1000
+
+rm -rf "${SAMPLE_OUT}"
+mv "${SAMPLE_OUT}.tmp" "${SAMPLE_OUT}"
+
+FINAL_CONTIGS="${SAMPLE_OUT}/${SAMPLE_ID}.contigs.fa"
+
+if [[ ! -s "${FINAL_CONTIGS}" ]]; then
+    echo "Missing final contigs: ${FINAL_CONTIGS}"
+    exit 1
+fi
+
+touch "${CHECKFILE}"
+
+echo "Completed MEGAHIT: ${SAMPLE_ID}"
+echo "Final contigs: ${FINAL_CONTIGS}"
+echo "Date: $(date)"

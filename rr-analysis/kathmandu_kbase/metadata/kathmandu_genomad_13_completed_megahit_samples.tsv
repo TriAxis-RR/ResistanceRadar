@@ -1,0 +1,14 @@
+sample_id	contigs_fasta
+E_11-12	/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline/rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/E_11-12/E_11-12.contigs.fa
+E_1-2	/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline/rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/E_1-2/E_1-2.contigs.fa
+E_3-4	/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline/rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/E_3-4/E_3-4.contigs.fa
+E_7-8	/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline/rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/E_7-8/E_7-8.contigs.fa
+E_9-10	/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline/rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/E_9-10/E_9-10.contigs.fa
+I_3-4	/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline/rr-analysis/kathmandu_kbase/results/megahit_batch01_2sample/I_3-4/I_3-4.contigs.fa
+I_5-6	/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline/rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/I_5-6/I_5-6.contigs.fa
+I_7-8	/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline/rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/I_7-8/I_7-8.contigs.fa
+I_9-10	/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline/rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/I_9-10/I_9-10.contigs.fa
+RW_2	/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline/rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/RW_2/RW_2.contigs.fa
+RW_4	/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline/rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/RW_4/RW_4.contigs.fa
+RW_5	/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline/rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/RW_5/RW_5.contigs.fa
+RW_6	/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline/rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/RW_6/RW_6.contigs.fa

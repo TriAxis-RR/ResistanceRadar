@@ -1,0 +1,26 @@
+ARG
+BEL
+BHR
+BIH
+BLR
+CYP
+EGY
+EOFcat > rr-analysis/hendriksen_resistancemap_2016/metadata/resistancemap_2016_target_iso3_all57.txt <<'EOF'
+EST
+FRA
+GBR
+GRC
+KOR
+KSV
+LBN
+LTU
+MKD
+MWI
+PHL
+PRT
+ROU
+RUS
+THA
+TUN
+TWN
+VNM

@@ -1,0 +1,2 @@
+sample_id	batch	read1	read2
+I_5-6	batch02_I56	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_I_5-6/I_5-6/I_5-6_decontam_R1.fastq.gz	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_I_5-6/I_5-6/I_5-6_decontam_R2.fastq.gz

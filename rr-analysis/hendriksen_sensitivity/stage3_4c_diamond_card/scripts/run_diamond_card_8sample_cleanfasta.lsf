@@ -1,0 +1,118 @@
+#!/bin/bash
+#BSUB -J "diamond34c_cf[1-8]"
+#BSUB -q single_chassis
+#BSUB -n 4
+#BSUB -R "span[hosts=1]"
+#BSUB -R "rusage[mem=8]"
+#BSUB -M 32
+#BSUB -W 24:00
+#BSUB -o rr-analysis/hendriksen_sensitivity/stage3_4c_diamond_card/logs/diamond34c_cleanfasta_%I.out
+#BSUB -e rr-analysis/hendriksen_sensitivity/stage3_4c_diamond_card/logs/diamond34c_cleanfasta_%I.err
+
+set -euo pipefail
+
+cd /rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline
+
+source /usr/local/apps/miniconda20240526/etc/profile.d/conda.sh
+conda activate /rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_meta
+
+STAGE34C="rr-analysis/hendriksen_sensitivity/stage3_4c_diamond_card"
+SHEET="$STAGE34C/samplesheets/hendriksen_8sample_diamond_card_samples.tsv"
+DB="$STAGE34C/db/CARD_v4.0.1_protein_models_combined"
+OUTROOT="$STAGE34C/results_cleanfasta"
+
+sample_id=$(awk -v i="$LSB_JOBINDEX" 'NR==i+1 {print $1}' "$SHEET")
+r1=$(awk -v i="$LSB_JOBINDEX" 'NR==i+1 {print $2}' "$SHEET")
+r2=$(awk -v i="$LSB_JOBINDEX" 'NR==i+1 {print $3}' "$SHEET")
+
+OUTDIR="$OUTROOT/$sample_id"
+mkdir -p "$OUTDIR"
+
+echo "Task index: $LSB_JOBINDEX"
+echo "Sample: $sample_id"
+echo "R1: $r1"
+echo "R2: $r2"
+echo "DB: $DB"
+echo "OUTDIR: $OUTDIR"
+echo "DIAMOND version:"
+diamond version
+
+echo "Converting R1 FASTQ to clean-header FASTA..."
+zcat "$r1" \
+  | awk '
+      NR%4==1 {
+        n++;
+        print ">R1_read_" n
+      }
+      NR%4==2 {
+        seq=toupper($0);
+        gsub(/[^ACGT]/,"N",seq);
+        print seq
+      }
+    ' \
+  > "$OUTDIR/${sample_id}_R1.cleanheaders.fasta"
+
+echo "Converting R2 FASTQ to clean-header FASTA..."
+zcat "$r2" \
+  | awk '
+      NR%4==1 {
+        n++;
+        print ">R2_read_" n
+      }
+      NR%4==2 {
+        seq=toupper($0);
+        gsub(/[^ACGT]/,"N",seq);
+        print seq
+      }
+    ' \
+  > "$OUTDIR/${sample_id}_R2.cleanheaders.fasta"
+
+echo "R1 FASTA records:"
+grep -c "^>" "$OUTDIR/${sample_id}_R1.cleanheaders.fasta"
+
+echo "R2 FASTA records:"
+grep -c "^>" "$OUTDIR/${sample_id}_R2.cleanheaders.fasta"
+
+echo "Running DIAMOND R1..."
+diamond blastx \
+  --db "$DB" \
+  --query "$OUTDIR/${sample_id}_R1.cleanheaders.fasta" \
+  --out "$OUTDIR/${sample_id}_R1_diamond_card.tsv" \
+  --outfmt 6 qseqid sseqid pident length evalue bitscore \
+  --evalue 1e-5 \
+  --id 80 \
+  --max-target-seqs 1 \
+  --threads 4 \
+  --block-size 0.1 \
+  --index-chunks 1
+
+echo "Running DIAMOND R2..."
+diamond blastx \
+  --db "$DB" \
+  --query "$OUTDIR/${sample_id}_R2.cleanheaders.fasta" \
+  --out "$OUTDIR/${sample_id}_R2_diamond_card.tsv" \
+  --outfmt 6 qseqid sseqid pident length evalue bitscore \
+  --evalue 1e-5 \
+  --id 80 \
+  --max-target-seqs 1 \
+  --threads 4 \
+  --block-size 0.1 \
+  --index-chunks 1
+
+cat "$OUTDIR/${sample_id}_R1_diamond_card.tsv" \
+    "$OUTDIR/${sample_id}_R2_diamond_card.tsv" \
+    > "$OUTDIR/${sample_id}_diamond_card_merged.tsv"
+
+echo "R1 hits:"
+wc -l "$OUTDIR/${sample_id}_R1_diamond_card.tsv"
+
+echo "R2 hits:"
+wc -l "$OUTDIR/${sample_id}_R2_diamond_card.tsv"
+
+echo "Merged hits:"
+wc -l "$OUTDIR/${sample_id}_diamond_card_merged.tsv"
+
+echo "Removing intermediate FASTA to save space..."
+rm -f "$OUTDIR/${sample_id}_R1.cleanheaders.fasta" "$OUTDIR/${sample_id}_R2.cleanheaders.fasta"
+
+echo "DONE: $sample_id"

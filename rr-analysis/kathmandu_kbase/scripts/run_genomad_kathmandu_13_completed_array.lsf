@@ -1,0 +1,91 @@
+#!/bin/bash
+#BSUB -J "KATH_GENOMAD_13[1-13]%2"
+#BSUB -q single_chassis
+#BSUB -n 8
+#BSUB -R "span[hosts=1]"
+#BSUB -R "rusage[mem=64GB]"
+#BSUB -W 72:00
+#BSUB -o rr-analysis/kathmandu_kbase/logs/KATH_GENOMAD_13_%I_%J.out
+#BSUB -e rr-analysis/kathmandu_kbase/logs/KATH_GENOMAD_13_%I_%J.err
+
+set -euo pipefail
+
+REPO="/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline"
+SAMPLESHEET="${REPO}/rr-analysis/kathmandu_kbase/metadata/kathmandu_genomad_13_completed_megahit_samples.tsv"
+GENOMAD="/rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_mobility/bin/genomad"
+GENOMAD_DB="/rsstu/users/s/sleblan/MismatchRepair/Project/references/genomad_db/genomad_db"
+OUTROOT="${REPO}/rr-analysis/kathmandu_kbase/results/genomad_kathmandu_13_completed_megahit"
+CHECKPOINT_ROOT="${REPO}/rr-analysis/kathmandu_kbase/checkpoints"
+
+export PATH="/rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_mobility/bin:${PATH}"
+
+cd "${REPO}"
+
+mkdir -p "${OUTROOT}"
+mkdir -p "${CHECKPOINT_ROOT}"
+mkdir -p "${REPO}/rr-analysis/kathmandu_kbase/logs"
+
+LINE=$(awk -v n="${LSB_JOBINDEX}" 'NR==n+1 {print}' "${SAMPLESHEET}")
+
+if [[ -z "${LINE}" ]]; then
+  echo "ERROR: No sample line found for LSB_JOBINDEX=${LSB_JOBINDEX}"
+  exit 1
+fi
+
+SAMPLE_ID=$(echo "${LINE}" | awk '{print $1}')
+CONTIGS=$(echo "${LINE}" | awk '{print $2}')
+
+OUTDIR="${OUTROOT}/${SAMPLE_ID}"
+CHECKPOINT="${CHECKPOINT_ROOT}/${SAMPLE_ID}_GENOMAD_COMPLETE.txt"
+
+echo "========================================"
+echo "Kathmandu geNomAD mobility/viral/plasmid annotation"
+echo "Sample: ${SAMPLE_ID}"
+echo "Contigs: ${CONTIGS}"
+echo "Output root: ${OUTROOT}"
+echo "Database: ${GENOMAD_DB}"
+echo "Job index: ${LSB_JOBINDEX}"
+echo "Host: $(hostname)"
+echo "Start: $(date)"
+echo "========================================"
+
+if [[ -s "${CHECKPOINT}" ]]; then
+  echo "Already complete: ${SAMPLE_ID}"
+  exit 0
+fi
+
+if [[ ! -s "${CONTIGS}" ]]; then
+  echo "ERROR: Missing or empty contigs file: ${CONTIGS}"
+  exit 1
+fi
+
+if [[ ! -d "${GENOMAD_DB}" ]]; then
+  echo "ERROR: Missing geNomAD database directory: ${GENOMAD_DB}"
+  exit 1
+fi
+
+if [[ -d "${OUTDIR}" ]]; then
+  echo "Existing geNomAD output directory found: ${OUTDIR}"
+  echo "Removing incomplete/old geNomAD output before rerun."
+  rm -rf "${OUTDIR}"
+fi
+
+"${GENOMAD}" end-to-end \
+  "${CONTIGS}" \
+  "${OUTDIR}" \
+  "${GENOMAD_DB}" \
+  --threads 8 \
+  --cleanup
+
+{
+  echo "${SAMPLE_ID} GENOMAD COMPLETE"
+  echo "date=$(date)"
+  echo "host=$(hostname)"
+  echo "contigs=${CONTIGS}"
+  echo "out_dir=${OUTDIR}"
+} > "${CHECKPOINT}"
+
+echo "geNomAD finished for ${SAMPLE_ID}"
+echo "Checkpoint: ${CHECKPOINT}"
+find "${OUTDIR}" -maxdepth 3 -type f | sort | head -50
+echo "End: $(date)"

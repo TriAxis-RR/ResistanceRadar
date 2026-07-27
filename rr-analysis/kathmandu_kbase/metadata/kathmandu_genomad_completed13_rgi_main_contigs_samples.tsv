@@ -1,0 +1,14 @@
+sample_id	contigs_fasta	genomad_dir
+E_11-12	rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/E_11-12/E_11-12.contigs.fa	rr-analysis/kathmandu_kbase/results/genomad_kathmandu_13_completed_megahit/E_11-12
+E_1-2	rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/E_1-2/E_1-2.contigs.fa	rr-analysis/kathmandu_kbase/results/genomad_kathmandu_13_completed_megahit/E_1-2
+E_3-4	rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/E_3-4/E_3-4.contigs.fa	rr-analysis/kathmandu_kbase/results/genomad_kathmandu_13_completed_megahit/E_3-4
+E_7-8	rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/E_7-8/E_7-8.contigs.fa	rr-analysis/kathmandu_kbase/results/genomad_kathmandu_13_completed_megahit/E_7-8
+E_9-10	rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/E_9-10/E_9-10.contigs.fa	rr-analysis/kathmandu_kbase/results/genomad_kathmandu_13_completed_megahit/E_9-10
+I_3-4	rr-analysis/kathmandu_kbase/results/megahit_batch01_2sample/I_3-4/I_3-4.contigs.fa	rr-analysis/kathmandu_kbase/results/genomad_kathmandu_13_completed_megahit/I_3-4
+I_5-6	rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/I_5-6/I_5-6.contigs.fa	rr-analysis/kathmandu_kbase/results/genomad_kathmandu_13_completed_megahit/I_5-6
+I_7-8	rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/I_7-8/I_7-8.contigs.fa	rr-analysis/kathmandu_kbase/results/genomad_kathmandu_13_completed_megahit/I_7-8
+I_9-10	rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/I_9-10/I_9-10.contigs.fa	rr-analysis/kathmandu_kbase/results/genomad_kathmandu_13_completed_megahit/I_9-10
+RW_2	rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/RW_2/RW_2.contigs.fa	rr-analysis/kathmandu_kbase/results/genomad_kathmandu_13_completed_megahit/RW_2
+RW_4	rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/RW_4/RW_4.contigs.fa	rr-analysis/kathmandu_kbase/results/genomad_kathmandu_13_completed_megahit/RW_4
+RW_5	rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/RW_5/RW_5.contigs.fa	rr-analysis/kathmandu_kbase/results/genomad_kathmandu_13_completed_megahit/RW_5
+RW_6	rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/RW_6/RW_6.contigs.fa	rr-analysis/kathmandu_kbase/results/genomad_kathmandu_13_completed_megahit/RW_6
