@@ -1,0 +1,524 @@
+set	sample_id	Drug_Class	ARG_hits	mobile_context_ARG_hits
+Kathmandu18	E_1-2	aminocoumarin antibiotic	4	3
+Kathmandu18	E_1-2	aminoglycoside antibiotic	16	5
+Kathmandu18	E_1-2	carbapenem	18	5
+Kathmandu18	E_1-2	cephalosporin	35	6
+Kathmandu18	E_1-2	cephamycin	13	3
+Kathmandu18	E_1-2	diaminopyrimidine antibiotic	13	0
+Kathmandu18	E_1-2	disinfecting agents and antiseptics	29	7
+Kathmandu18	E_1-2	elfamycin antibiotic	1	0
+Kathmandu18	E_1-2	fluoroquinolone antibiotic	85	3
+Kathmandu18	E_1-2	glycopeptide antibiotic	355	2
+Kathmandu18	E_1-2	glycylcycline	8	2
+Kathmandu18	E_1-2	lincosamide antibiotic	8	4
+Kathmandu18	E_1-2	macrolide antibiotic	22	8
+Kathmandu18	E_1-2	monobactam	5	1
+Kathmandu18	E_1-2	nitroimidazole antibiotic	8	1
+Kathmandu18	E_1-2	nucleoside antibiotic	6	3
+Kathmandu18	E_1-2	penam	33	6
+Kathmandu18	E_1-2	penem	4	2
+Kathmandu18	E_1-2	peptide antibiotic	9	2
+Kathmandu18	E_1-2	phenicol antibiotic	22	3
+Kathmandu18	E_1-2	phosphonic acid antibiotic	9	0
+Kathmandu18	E_1-2	pleuromutilin antibiotic	1	1
+Kathmandu18	E_1-2	rifamycin antibiotic	12	2
+Kathmandu18	E_1-2	streptogramin A antibiotic	2	2
+Kathmandu18	E_1-2	streptogramin B antibiotic	2	2
+Kathmandu18	E_1-2	streptogramin antibiotic	4	4
+Kathmandu18	E_1-2	sulfonamide antibiotic	1	0
+Kathmandu18	E_1-2	tetracycline antibiotic	77	9
+Kathmandu18	E_11-12	aminocoumarin antibiotic	5	3
+Kathmandu18	E_11-12	aminoglycoside antibiotic	28	11
+Kathmandu18	E_11-12	carbapenem	19	5
+Kathmandu18	E_11-12	cephalosporin	45	9
+Kathmandu18	E_11-12	cephamycin	15	5
+Kathmandu18	E_11-12	diaminopyrimidine antibiotic	20	5
+Kathmandu18	E_11-12	disinfecting agents and antiseptics	57	9
+Kathmandu18	E_11-12	elfamycin antibiotic	1	0
+Kathmandu18	E_11-12	fluoroquinolone antibiotic	91	9
+Kathmandu18	E_11-12	glycopeptide antibiotic	290	6
+Kathmandu18	E_11-12	glycylcycline	12	4
+Kathmandu18	E_11-12	lincosamide antibiotic	12	4
+Kathmandu18	E_11-12	macrolide antibiotic	36	9
+Kathmandu18	E_11-12	monobactam	7	3
+Kathmandu18	E_11-12	nitrofuran antibiotic	1	0
+Kathmandu18	E_11-12	nitroimidazole antibiotic	15	2
+Kathmandu18	E_11-12	nucleoside antibiotic	6	3
+Kathmandu18	E_11-12	penam	46	7
+Kathmandu18	E_11-12	penem	6	4
+Kathmandu18	E_11-12	peptide antibiotic	16	3
+Kathmandu18	E_11-12	phenicol antibiotic	30	6
+Kathmandu18	E_11-12	phosphonic acid antibiotic	13	0
+Kathmandu18	E_11-12	pleuromutilin antibiotic	1	0
+Kathmandu18	E_11-12	rifamycin antibiotic	17	4
+Kathmandu18	E_11-12	streptogramin A antibiotic	6	3
+Kathmandu18	E_11-12	streptogramin B antibiotic	7	3
+Kathmandu18	E_11-12	streptogramin antibiotic	9	4
+Kathmandu18	E_11-12	sulfonamide antibiotic	4	0
+Kathmandu18	E_11-12	tetracycline antibiotic	86	10
+Kathmandu18	E_3-4	aminocoumarin antibiotic	5	4
+Kathmandu18	E_3-4	aminoglycoside antibiotic	19	7
+Kathmandu18	E_3-4	carbapenem	21	7
+Kathmandu18	E_3-4	cephalosporin	39	11
+Kathmandu18	E_3-4	cephamycin	12	4
+Kathmandu18	E_3-4	diaminopyrimidine antibiotic	5	2
+Kathmandu18	E_3-4	disinfecting agents and antiseptics	51	13
+Kathmandu18	E_3-4	elfamycin antibiotic	1	0
+Kathmandu18	E_3-4	fluoroquinolone antibiotic	107	9
+Kathmandu18	E_3-4	glycopeptide antibiotic	394	0
+Kathmandu18	E_3-4	glycylcycline	11	4
+Kathmandu18	E_3-4	lincosamide antibiotic	8	4
+Kathmandu18	E_3-4	macrolide antibiotic	25	8
+Kathmandu18	E_3-4	monobactam	6	2
+Kathmandu18	E_3-4	nitroimidazole antibiotic	11	2
+Kathmandu18	E_3-4	nucleoside antibiotic	5	3
+Kathmandu18	E_3-4	penam	37	7
+Kathmandu18	E_3-4	penem	4	3
+Kathmandu18	E_3-4	peptide antibiotic	8	3
+Kathmandu18	E_3-4	phenicol antibiotic	19	5
+Kathmandu18	E_3-4	phosphonic acid antibiotic	9	0
+Kathmandu18	E_3-4	pleuromutilin antibiotic	1	1
+Kathmandu18	E_3-4	rifamycin antibiotic	17	6
+Kathmandu18	E_3-4	streptogramin A antibiotic	3	2
+Kathmandu18	E_3-4	streptogramin B antibiotic	3	2
+Kathmandu18	E_3-4	streptogramin antibiotic	4	3
+Kathmandu18	E_3-4	sulfonamide antibiotic	3	0
+Kathmandu18	E_3-4	tetracycline antibiotic	109	11
+Kathmandu18	E_5-6	aminocoumarin antibiotic	10	5
+Kathmandu18	E_5-6	aminoglycoside antibiotic	60	10
+Kathmandu18	E_5-6	carbapenem	38	8
+Kathmandu18	E_5-6	cephalosporin	81	12
+Kathmandu18	E_5-6	cephamycin	28	4
+Kathmandu18	E_5-6	diaminopyrimidine antibiotic	31	5
+Kathmandu18	E_5-6	disinfecting agents and antiseptics	92	7
+Kathmandu18	E_5-6	elfamycin antibiotic	4	0
+Kathmandu18	E_5-6	fluoroquinolone antibiotic	145	14
+Kathmandu18	E_5-6	glycopeptide antibiotic	271	7
+Kathmandu18	E_5-6	glycylcycline	19	4
+Kathmandu18	E_5-6	lincosamide antibiotic	21	7
+Kathmandu18	E_5-6	macrolide antibiotic	64	11
+Kathmandu18	E_5-6	monobactam	13	3
+Kathmandu18	E_5-6	nitrofuran antibiotic	1	0
+Kathmandu18	E_5-6	nitroimidazole antibiotic	25	2
+Kathmandu18	E_5-6	nucleoside antibiotic	9	0
+Kathmandu18	E_5-6	oxazolidinone antibiotic	1	0
+Kathmandu18	E_5-6	penam	73	12
+Kathmandu18	E_5-6	penem	17	3
+Kathmandu18	E_5-6	peptide antibiotic	42	5
+Kathmandu18	E_5-6	phenicol antibiotic	51	9
+Kathmandu18	E_5-6	phosphonic acid antibiotic	12	0
+Kathmandu18	E_5-6	pleuromutilin antibiotic	1	0
+Kathmandu18	E_5-6	rifamycin antibiotic	31	4
+Kathmandu18	E_5-6	streptogramin A antibiotic	11	4
+Kathmandu18	E_5-6	streptogramin B antibiotic	13	5
+Kathmandu18	E_5-6	streptogramin antibiotic	15	5
+Kathmandu18	E_5-6	sulfonamide antibiotic	3	1
+Kathmandu18	E_5-6	tetracycline antibiotic	126	17
+Kathmandu18	E_7-8	aminocoumarin antibiotic	6	5
+Kathmandu18	E_7-8	aminoglycoside antibiotic	20	9
+Kathmandu18	E_7-8	carbapenem	19	6
+Kathmandu18	E_7-8	cephalosporin	40	8
+Kathmandu18	E_7-8	cephamycin	14	3
+Kathmandu18	E_7-8	diaminopyrimidine antibiotic	18	4
+Kathmandu18	E_7-8	disinfecting agents and antiseptics	61	10
+Kathmandu18	E_7-8	elfamycin antibiotic	2	0
+Kathmandu18	E_7-8	fluoroquinolone antibiotic	111	8
+Kathmandu18	E_7-8	glycopeptide antibiotic	373	2
+Kathmandu18	E_7-8	glycylcycline	10	2
+Kathmandu18	E_7-8	lincosamide antibiotic	9	4
+Kathmandu18	E_7-8	macrolide antibiotic	27	9
+Kathmandu18	E_7-8	monobactam	5	2
+Kathmandu18	E_7-8	nitroimidazole antibiotic	11	2
+Kathmandu18	E_7-8	nucleoside antibiotic	4	3
+Kathmandu18	E_7-8	oxazolidinone antibiotic	1	0
+Kathmandu18	E_7-8	penam	36	8
+Kathmandu18	E_7-8	penem	4	1
+Kathmandu18	E_7-8	peptide antibiotic	12	0
+Kathmandu18	E_7-8	phenicol antibiotic	26	5
+Kathmandu18	E_7-8	phosphonic acid antibiotic	12	1
+Kathmandu18	E_7-8	pleuromutilin antibiotic	1	1
+Kathmandu18	E_7-8	rifamycin antibiotic	15	2
+Kathmandu18	E_7-8	streptogramin A antibiotic	4	2
+Kathmandu18	E_7-8	streptogramin B antibiotic	4	2
+Kathmandu18	E_7-8	streptogramin antibiotic	6	4
+Kathmandu18	E_7-8	sulfonamide antibiotic	1	0
+Kathmandu18	E_7-8	tetracycline antibiotic	103	10
+Kathmandu18	E_9-10	aminocoumarin antibiotic	2	1
+Kathmandu18	E_9-10	aminoglycoside antibiotic	18	4
+Kathmandu18	E_9-10	carbapenem	17	5
+Kathmandu18	E_9-10	cephalosporin	30	8
+Kathmandu18	E_9-10	cephamycin	10	1
+Kathmandu18	E_9-10	diaminopyrimidine antibiotic	6	0
+Kathmandu18	E_9-10	disinfecting agents and antiseptics	48	8
+Kathmandu18	E_9-10	elfamycin antibiotic	2	0
+Kathmandu18	E_9-10	fluoroquinolone antibiotic	65	6
+Kathmandu18	E_9-10	glycopeptide antibiotic	370	1
+Kathmandu18	E_9-10	glycylcycline	8	4
+Kathmandu18	E_9-10	lincosamide antibiotic	7	4
+Kathmandu18	E_9-10	macrolide antibiotic	22	5
+Kathmandu18	E_9-10	monobactam	4	1
+Kathmandu18	E_9-10	nitroimidazole antibiotic	11	0
+Kathmandu18	E_9-10	nucleoside antibiotic	3	0
+Kathmandu18	E_9-10	oxazolidinone antibiotic	2	0
+Kathmandu18	E_9-10	penam	28	8
+Kathmandu18	E_9-10	penem	3	1
+Kathmandu18	E_9-10	peptide antibiotic	9	1
+Kathmandu18	E_9-10	phenicol antibiotic	16	6
+Kathmandu18	E_9-10	phosphonic acid antibiotic	6	0
+Kathmandu18	E_9-10	pleuromutilin antibiotic	1	1
+Kathmandu18	E_9-10	rifamycin antibiotic	11	5
+Kathmandu18	E_9-10	streptogramin A antibiotic	2	2
+Kathmandu18	E_9-10	streptogramin B antibiotic	2	2
+Kathmandu18	E_9-10	streptogramin antibiotic	4	3
+Kathmandu18	E_9-10	sulfonamide antibiotic	1	0
+Kathmandu18	E_9-10	tetracycline antibiotic	73	11
+Kathmandu18	I_1-2	aminocoumarin antibiotic	9	2
+Kathmandu18	I_1-2	aminoglycoside antibiotic	67	12
+Kathmandu18	I_1-2	carbapenem	46	11
+Kathmandu18	I_1-2	cephalosporin	82	17
+Kathmandu18	I_1-2	cephamycin	26	6
+Kathmandu18	I_1-2	diaminopyrimidine antibiotic	24	4
+Kathmandu18	I_1-2	disinfecting agents and antiseptics	96	16
+Kathmandu18	I_1-2	elfamycin antibiotic	2	0
+Kathmandu18	I_1-2	fluoroquinolone antibiotic	132	21
+Kathmandu18	I_1-2	glycopeptide antibiotic	337	3
+Kathmandu18	I_1-2	glycylcycline	21	6
+Kathmandu18	I_1-2	lincosamide antibiotic	21	6
+Kathmandu18	I_1-2	macrolide antibiotic	70	13
+Kathmandu18	I_1-2	monobactam	13	4
+Kathmandu18	I_1-2	mupirocin-like antibiotic	1	0
+Kathmandu18	I_1-2	nitroimidazole antibiotic	24	1
+Kathmandu18	I_1-2	nucleoside antibiotic	8	4
+Kathmandu18	I_1-2	oxazolidinone antibiotic	1	0
+Kathmandu18	I_1-2	penam	76	14
+Kathmandu18	I_1-2	penem	21	5
+Kathmandu18	I_1-2	peptide antibiotic	46	6
+Kathmandu18	I_1-2	phenicol antibiotic	45	11
+Kathmandu18	I_1-2	phosphonic acid antibiotic	13	1
+Kathmandu18	I_1-2	pleuromutilin antibiotic	1	1
+Kathmandu18	I_1-2	rifamycin antibiotic	36	8
+Kathmandu18	I_1-2	streptogramin A antibiotic	10	2
+Kathmandu18	I_1-2	streptogramin B antibiotic	12	3
+Kathmandu18	I_1-2	streptogramin antibiotic	14	5
+Kathmandu18	I_1-2	sulfonamide antibiotic	4	0
+Kathmandu18	I_1-2	tetracycline antibiotic	125	17
+Kathmandu18	I_11-12	aminocoumarin antibiotic	6	2
+Kathmandu18	I_11-12	aminoglycoside antibiotic	56	10
+Kathmandu18	I_11-12	carbapenem	38	12
+Kathmandu18	I_11-12	cephalosporin	76	16
+Kathmandu18	I_11-12	cephamycin	24	4
+Kathmandu18	I_11-12	diaminopyrimidine antibiotic	22	4
+Kathmandu18	I_11-12	disinfecting agents and antiseptics	92	10
+Kathmandu18	I_11-12	elfamycin antibiotic	3	0
+Kathmandu18	I_11-12	fluoroquinolone antibiotic	113	11
+Kathmandu18	I_11-12	glycopeptide antibiotic	301	8
+Kathmandu18	I_11-12	glycylcycline	19	4
+Kathmandu18	I_11-12	lincosamide antibiotic	19	8
+Kathmandu18	I_11-12	macrolide antibiotic	59	14
+Kathmandu18	I_11-12	monobactam	11	3
+Kathmandu18	I_11-12	nitrofuran antibiotic	1	0
+Kathmandu18	I_11-12	nitroimidazole antibiotic	23	0
+Kathmandu18	I_11-12	nucleoside antibiotic	10	3
+Kathmandu18	I_11-12	oxazolidinone antibiotic	2	0
+Kathmandu18	I_11-12	penam	69	14
+Kathmandu18	I_11-12	penem	14	2
+Kathmandu18	I_11-12	peptide antibiotic	38	6
+Kathmandu18	I_11-12	phenicol antibiotic	39	7
+Kathmandu18	I_11-12	phosphonic acid antibiotic	11	1
+Kathmandu18	I_11-12	pleuromutilin antibiotic	1	1
+Kathmandu18	I_11-12	rifamycin antibiotic	29	6
+Kathmandu18	I_11-12	streptogramin A antibiotic	9	4
+Kathmandu18	I_11-12	streptogramin B antibiotic	11	5
+Kathmandu18	I_11-12	streptogramin antibiotic	13	7
+Kathmandu18	I_11-12	sulfonamide antibiotic	4	0
+Kathmandu18	I_11-12	tetracycline antibiotic	112	17
+Kathmandu18	I_3-4	aminocoumarin antibiotic	10	0
+Kathmandu18	I_3-4	aminoglycoside antibiotic	66	9
+Kathmandu18	I_3-4	carbapenem	48	7
+Kathmandu18	I_3-4	cephalosporin	98	14
+Kathmandu18	I_3-4	cephamycin	28	5
+Kathmandu18	I_3-4	diaminopyrimidine antibiotic	24	3
+Kathmandu18	I_3-4	disinfecting agents and antiseptics	109	15
+Kathmandu18	I_3-4	elfamycin antibiotic	3	0
+Kathmandu18	I_3-4	fluoroquinolone antibiotic	127	17
+Kathmandu18	I_3-4	glycopeptide antibiotic	309	5
+Kathmandu18	I_3-4	glycylcycline	26	7
+Kathmandu18	I_3-4	lincosamide antibiotic	21	7
+Kathmandu18	I_3-4	macrolide antibiotic	71	14
+Kathmandu18	I_3-4	monobactam	18	4
+Kathmandu18	I_3-4	nitroimidazole antibiotic	25	2
+Kathmandu18	I_3-4	nucleoside antibiotic	12	3
+Kathmandu18	I_3-4	oxazolidinone antibiotic	1	0
+Kathmandu18	I_3-4	penam	81	13
+Kathmandu18	I_3-4	penem	25	4
+Kathmandu18	I_3-4	peptide antibiotic	54	4
+Kathmandu18	I_3-4	phenicol antibiotic	51	10
+Kathmandu18	I_3-4	phosphonic acid antibiotic	11	1
+Kathmandu18	I_3-4	rifamycin antibiotic	46	7
+Kathmandu18	I_3-4	streptogramin A antibiotic	11	5
+Kathmandu18	I_3-4	streptogramin B antibiotic	12	6
+Kathmandu18	I_3-4	streptogramin antibiotic	13	7
+Kathmandu18	I_3-4	sulfonamide antibiotic	3	1
+Kathmandu18	I_3-4	tetracycline antibiotic	126	22
+Kathmandu18	I_5-6	aminocoumarin antibiotic	1	0
+Kathmandu18	I_5-6	aminoglycoside antibiotic	19	6
+Kathmandu18	I_5-6	carbapenem	14	4
+Kathmandu18	I_5-6	cephalosporin	29	5
+Kathmandu18	I_5-6	cephamycin	11	2
+Kathmandu18	I_5-6	diaminopyrimidine antibiotic	11	2
+Kathmandu18	I_5-6	disinfecting agents and antiseptics	48	6
+Kathmandu18	I_5-6	elfamycin antibiotic	1	0
+Kathmandu18	I_5-6	fluoroquinolone antibiotic	93	8
+Kathmandu18	I_5-6	glycopeptide antibiotic	329	3
+Kathmandu18	I_5-6	glycylcycline	7	2
+Kathmandu18	I_5-6	lincosamide antibiotic	7	4
+Kathmandu18	I_5-6	macrolide antibiotic	25	3
+Kathmandu18	I_5-6	monobactam	4	1
+Kathmandu18	I_5-6	nitroimidazole antibiotic	10	2
+Kathmandu18	I_5-6	nucleoside antibiotic	5	1
+Kathmandu18	I_5-6	penam	29	4
+Kathmandu18	I_5-6	penem	3	1
+Kathmandu18	I_5-6	peptide antibiotic	11	2
+Kathmandu18	I_5-6	phenicol antibiotic	19	4
+Kathmandu18	I_5-6	phosphonic acid antibiotic	8	1
+Kathmandu18	I_5-6	pleuromutilin antibiotic	1	1
+Kathmandu18	I_5-6	rifamycin antibiotic	12	3
+Kathmandu18	I_5-6	salicylic acid antibiotic	1	0
+Kathmandu18	I_5-6	streptogramin A antibiotic	3	1
+Kathmandu18	I_5-6	streptogramin B antibiotic	3	1
+Kathmandu18	I_5-6	streptogramin antibiotic	5	2
+Kathmandu18	I_5-6	sulfonamide antibiotic	3	0
+Kathmandu18	I_5-6	tetracycline antibiotic	92	7
+Kathmandu18	I_7-8	aminocoumarin antibiotic	7	4
+Kathmandu18	I_7-8	aminoglycoside antibiotic	65	9
+Kathmandu18	I_7-8	carbapenem	47	11
+Kathmandu18	I_7-8	cephalosporin	106	18
+Kathmandu18	I_7-8	cephamycin	33	5
+Kathmandu18	I_7-8	diaminopyrimidine antibiotic	27	4
+Kathmandu18	I_7-8	disinfecting agents and antiseptics	108	6
+Kathmandu18	I_7-8	elfamycin antibiotic	3	0
+Kathmandu18	I_7-8	fluoroquinolone antibiotic	139	13
+Kathmandu18	I_7-8	glycopeptide antibiotic	294	6
+Kathmandu18	I_7-8	glycylcycline	25	4
+Kathmandu18	I_7-8	lincosamide antibiotic	19	4
+Kathmandu18	I_7-8	macrolide antibiotic	77	13
+Kathmandu18	I_7-8	monobactam	19	7
+Kathmandu18	I_7-8	nitrofuran antibiotic	1	0
+Kathmandu18	I_7-8	nitroimidazole antibiotic	26	3
+Kathmandu18	I_7-8	nucleoside antibiotic	12	0
+Kathmandu18	I_7-8	oxazolidinone antibiotic	1	0
+Kathmandu18	I_7-8	penam	82	15
+Kathmandu18	I_7-8	penem	26	5
+Kathmandu18	I_7-8	peptide antibiotic	59	5
+Kathmandu18	I_7-8	phenicol antibiotic	52	10
+Kathmandu18	I_7-8	phosphonic acid antibiotic	12	0
+Kathmandu18	I_7-8	pleuromutilin antibiotic	1	0
+Kathmandu18	I_7-8	rifamycin antibiotic	49	4
+Kathmandu18	I_7-8	streptogramin A antibiotic	10	3
+Kathmandu18	I_7-8	streptogramin B antibiotic	11	4
+Kathmandu18	I_7-8	streptogramin antibiotic	13	5
+Kathmandu18	I_7-8	sulfonamide antibiotic	4	2
+Kathmandu18	I_7-8	tetracycline antibiotic	135	21
+Kathmandu18	I_9-10	aminocoumarin antibiotic	12	3
+Kathmandu18	I_9-10	aminoglycoside antibiotic	75	11
+Kathmandu18	I_9-10	carbapenem	44	8
+Kathmandu18	I_9-10	cephalosporin	108	19
+Kathmandu18	I_9-10	cephamycin	31	6
+Kathmandu18	I_9-10	diaminopyrimidine antibiotic	33	3
+Kathmandu18	I_9-10	disinfecting agents and antiseptics	127	11
+Kathmandu18	I_9-10	elfamycin antibiotic	6	0
+Kathmandu18	I_9-10	fluoroquinolone antibiotic	147	22
+Kathmandu18	I_9-10	glycopeptide antibiotic	324	6
+Kathmandu18	I_9-10	glycylcycline	28	9
+Kathmandu18	I_9-10	lincosamide antibiotic	20	6
+Kathmandu18	I_9-10	macrolide antibiotic	77	14
+Kathmandu18	I_9-10	monobactam	17	6
+Kathmandu18	I_9-10	nitrofuran antibiotic	2	0
+Kathmandu18	I_9-10	nitroimidazole antibiotic	29	2
+Kathmandu18	I_9-10	nucleoside antibiotic	17	2
+Kathmandu18	I_9-10	oxazolidinone antibiotic	1	0
+Kathmandu18	I_9-10	penam	84	17
+Kathmandu18	I_9-10	penem	20	4
+Kathmandu18	I_9-10	peptide antibiotic	61	4
+Kathmandu18	I_9-10	phenicol antibiotic	58	13
+Kathmandu18	I_9-10	phosphonic acid antibiotic	18	1
+Kathmandu18	I_9-10	rifamycin antibiotic	52	9
+Kathmandu18	I_9-10	streptogramin A antibiotic	9	4
+Kathmandu18	I_9-10	streptogramin B antibiotic	11	5
+Kathmandu18	I_9-10	streptogramin antibiotic	13	7
+Kathmandu18	I_9-10	sulfonamide antibiotic	2	0
+Kathmandu18	I_9-10	tetracycline antibiotic	152	26
+Kathmandu18	RW_1	aminocoumarin antibiotic	4	4
+Kathmandu18	RW_1	aminoglycoside antibiotic	40	11
+Kathmandu18	RW_1	carbapenem	19	5
+Kathmandu18	RW_1	cephalosporin	45	9
+Kathmandu18	RW_1	cephamycin	15	4
+Kathmandu18	RW_1	diaminopyrimidine antibiotic	17	3
+Kathmandu18	RW_1	disinfecting agents and antiseptics	69	11
+Kathmandu18	RW_1	elfamycin antibiotic	2	0
+Kathmandu18	RW_1	fluoroquinolone antibiotic	75	13
+Kathmandu18	RW_1	glycopeptide antibiotic	300	9
+Kathmandu18	RW_1	glycylcycline	8	4
+Kathmandu18	RW_1	lincosamide antibiotic	15	5
+Kathmandu18	RW_1	macrolide antibiotic	39	13
+Kathmandu18	RW_1	monobactam	5	3
+Kathmandu18	RW_1	nitroimidazole antibiotic	24	1
+Kathmandu18	RW_1	nucleoside antibiotic	6	3
+Kathmandu18	RW_1	oxazolidinone antibiotic	2	0
+Kathmandu18	RW_1	penam	41	8
+Kathmandu18	RW_1	penem	6	4
+Kathmandu18	RW_1	peptide antibiotic	15	2
+Kathmandu18	RW_1	phenicol antibiotic	28	6
+Kathmandu18	RW_1	phosphonic acid antibiotic	6	0
+Kathmandu18	RW_1	rifamycin antibiotic	12	4
+Kathmandu18	RW_1	streptogramin A antibiotic	9	4
+Kathmandu18	RW_1	streptogramin B antibiotic	10	5
+Kathmandu18	RW_1	streptogramin antibiotic	11	6
+Kathmandu18	RW_1	sulfonamide antibiotic	3	1
+Kathmandu18	RW_1	tetracycline antibiotic	81	15
+Kathmandu18	RW_2	aminocoumarin antibiotic	6	3
+Kathmandu18	RW_2	aminoglycoside antibiotic	38	9
+Kathmandu18	RW_2	carbapenem	32	8
+Kathmandu18	RW_2	cephalosporin	64	13
+Kathmandu18	RW_2	cephamycin	23	6
+Kathmandu18	RW_2	diaminopyrimidine antibiotic	24	4
+Kathmandu18	RW_2	disinfecting agents and antiseptics	97	13
+Kathmandu18	RW_2	elfamycin antibiotic	2	0
+Kathmandu18	RW_2	fluoroquinolone antibiotic	104	8
+Kathmandu18	RW_2	glycopeptide antibiotic	133	3
+Kathmandu18	RW_2	glycylcycline	18	5
+Kathmandu18	RW_2	lincosamide antibiotic	12	5
+Kathmandu18	RW_2	macrolide antibiotic	44	11
+Kathmandu18	RW_2	monobactam	13	5
+Kathmandu18	RW_2	nitroimidazole antibiotic	11	1
+Kathmandu18	RW_2	nucleoside antibiotic	7	3
+Kathmandu18	RW_2	oxazolidinone antibiotic	3	0
+Kathmandu18	RW_2	penam	62	11
+Kathmandu18	RW_2	penem	14	6
+Kathmandu18	RW_2	peptide antibiotic	22	2
+Kathmandu18	RW_2	phenicol antibiotic	44	9
+Kathmandu18	RW_2	phosphonic acid antibiotic	12	1
+Kathmandu18	RW_2	pleuromutilin antibiotic	1	1
+Kathmandu18	RW_2	rifamycin antibiotic	23	5
+Kathmandu18	RW_2	streptogramin A antibiotic	5	3
+Kathmandu18	RW_2	streptogramin B antibiotic	6	3
+Kathmandu18	RW_2	streptogramin antibiotic	8	5
+Kathmandu18	RW_2	sulfonamide antibiotic	3	1
+Kathmandu18	RW_2	tetracycline antibiotic	91	13
+Kathmandu18	RW_3	aminocoumarin antibiotic	7	5
+Kathmandu18	RW_3	aminoglycoside antibiotic	37	7
+Kathmandu18	RW_3	carbapenem	24	3
+Kathmandu18	RW_3	cephalosporin	55	5
+Kathmandu18	RW_3	cephamycin	16	2
+Kathmandu18	RW_3	diaminopyrimidine antibiotic	18	2
+Kathmandu18	RW_3	disinfecting agents and antiseptics	81	9
+Kathmandu18	RW_3	fluoroquinolone antibiotic	116	4
+Kathmandu18	RW_3	glycopeptide antibiotic	153	3
+Kathmandu18	RW_3	glycylcycline	12	0
+Kathmandu18	RW_3	lincosamide antibiotic	12	3
+Kathmandu18	RW_3	macrolide antibiotic	42	5
+Kathmandu18	RW_3	monobactam	5	0
+Kathmandu18	RW_3	nitrofuran antibiotic	2	0
+Kathmandu18	RW_3	nitroimidazole antibiotic	9	1
+Kathmandu18	RW_3	nucleoside antibiotic	6	3
+Kathmandu18	RW_3	oxazolidinone antibiotic	1	0
+Kathmandu18	RW_3	penam	52	3
+Kathmandu18	RW_3	penem	9	0
+Kathmandu18	RW_3	peptide antibiotic	23	3
+Kathmandu18	RW_3	phenicol antibiotic	29	1
+Kathmandu18	RW_3	phosphonic acid antibiotic	11	0
+Kathmandu18	RW_3	pleuromutilin antibiotic	1	1
+Kathmandu18	RW_3	rifamycin antibiotic	18	0
+Kathmandu18	RW_3	streptogramin A antibiotic	5	1
+Kathmandu18	RW_3	streptogramin B antibiotic	5	1
+Kathmandu18	RW_3	streptogramin antibiotic	7	2
+Kathmandu18	RW_3	sulfonamide antibiotic	3	0
+Kathmandu18	RW_3	tetracycline antibiotic	105	6
+Kathmandu18	RW_4	aminocoumarin antibiotic	7	4
+Kathmandu18	RW_4	aminoglycoside antibiotic	49	7
+Kathmandu18	RW_4	carbapenem	33	5
+Kathmandu18	RW_4	cephalosporin	73	6
+Kathmandu18	RW_4	cephamycin	19	3
+Kathmandu18	RW_4	diaminopyrimidine antibiotic	21	3
+Kathmandu18	RW_4	disinfecting agents and antiseptics	113	8
+Kathmandu18	RW_4	elfamycin antibiotic	3	0
+Kathmandu18	RW_4	fluoroquinolone antibiotic	102	11
+Kathmandu18	RW_4	glycopeptide antibiotic	173	0
+Kathmandu18	RW_4	glycylcycline	16	1
+Kathmandu18	RW_4	lincosamide antibiotic	17	6
+Kathmandu18	RW_4	macrolide antibiotic	55	11
+Kathmandu18	RW_4	monobactam	10	2
+Kathmandu18	RW_4	nitroimidazole antibiotic	13	1
+Kathmandu18	RW_4	nucleoside antibiotic	12	4
+Kathmandu18	RW_4	oxazolidinone antibiotic	2	0
+Kathmandu18	RW_4	penam	62	7
+Kathmandu18	RW_4	penem	13	1
+Kathmandu18	RW_4	peptide antibiotic	39	3
+Kathmandu18	RW_4	phenicol antibiotic	37	5
+Kathmandu18	RW_4	phosphonic acid antibiotic	12	0
+Kathmandu18	RW_4	pleuromutilin antibiotic	1	1
+Kathmandu18	RW_4	rifamycin antibiotic	33	1
+Kathmandu18	RW_4	streptogramin A antibiotic	8	2
+Kathmandu18	RW_4	streptogramin B antibiotic	9	3
+Kathmandu18	RW_4	streptogramin antibiotic	11	5
+Kathmandu18	RW_4	sulfonamide antibiotic	3	0
+Kathmandu18	RW_4	tetracycline antibiotic	99	17
+Kathmandu18	RW_5	aminocoumarin antibiotic	6	1
+Kathmandu18	RW_5	aminoglycoside antibiotic	50	6
+Kathmandu18	RW_5	carbapenem	31	8
+Kathmandu18	RW_5	cephalosporin	76	14
+Kathmandu18	RW_5	cephamycin	26	6
+Kathmandu18	RW_5	diaminopyrimidine antibiotic	23	3
+Kathmandu18	RW_5	disinfecting agents and antiseptics	106	7
+Kathmandu18	RW_5	elfamycin antibiotic	3	0
+Kathmandu18	RW_5	fluoroquinolone antibiotic	109	16
+Kathmandu18	RW_5	glycopeptide antibiotic	209	5
+Kathmandu18	RW_5	glycylcycline	22	5
+Kathmandu18	RW_5	lincosamide antibiotic	12	5
+Kathmandu18	RW_5	macrolide antibiotic	55	10
+Kathmandu18	RW_5	monobactam	14	6
+Kathmandu18	RW_5	nitrofuran antibiotic	1	0
+Kathmandu18	RW_5	nitroimidazole antibiotic	15	1
+Kathmandu18	RW_5	nucleoside antibiotic	14	0
+Kathmandu18	RW_5	oxazolidinone antibiotic	1	0
+Kathmandu18	RW_5	penam	62	12
+Kathmandu18	RW_5	penem	17	5
+Kathmandu18	RW_5	peptide antibiotic	35	4
+Kathmandu18	RW_5	phenicol antibiotic	43	10
+Kathmandu18	RW_5	phosphonic acid antibiotic	10	2
+Kathmandu18	RW_5	pleuromutilin antibiotic	1	1
+Kathmandu18	RW_5	rifamycin antibiotic	34	5
+Kathmandu18	RW_5	streptogramin A antibiotic	6	3
+Kathmandu18	RW_5	streptogramin B antibiotic	6	3
+Kathmandu18	RW_5	streptogramin antibiotic	8	5
+Kathmandu18	RW_5	sulfonamide antibiotic	3	1
+Kathmandu18	RW_5	tetracycline antibiotic	115	14
+Kathmandu18	RW_6	aminocoumarin antibiotic	4	2
+Kathmandu18	RW_6	aminoglycoside antibiotic	38	8
+Kathmandu18	RW_6	carbapenem	33	9
+Kathmandu18	RW_6	cephalosporin	61	12
+Kathmandu18	RW_6	cephamycin	19	4
+Kathmandu18	RW_6	diaminopyrimidine antibiotic	13	0
+Kathmandu18	RW_6	disinfecting agents and antiseptics	83	10
+Kathmandu18	RW_6	elfamycin antibiotic	3	0
+Kathmandu18	RW_6	fluoroquinolone antibiotic	81	10
+Kathmandu18	RW_6	glycopeptide antibiotic	207	4
+Kathmandu18	RW_6	glycylcycline	14	3
+Kathmandu18	RW_6	lincosamide antibiotic	16	6
+Kathmandu18	RW_6	macrolide antibiotic	41	9
+Kathmandu18	RW_6	monobactam	11	4
+Kathmandu18	RW_6	nitrofuran antibiotic	1	0
+Kathmandu18	RW_6	nitroimidazole antibiotic	15	1
+Kathmandu18	RW_6	nucleoside antibiotic	8	4
+Kathmandu18	RW_6	penam	56	10
+Kathmandu18	RW_6	penem	12	4
+Kathmandu18	RW_6	peptide antibiotic	22	2
+Kathmandu18	RW_6	phenicol antibiotic	29	6
+Kathmandu18	RW_6	phosphonic acid antibiotic	10	0
+Kathmandu18	RW_6	pleuromutilin antibiotic	1	1
+Kathmandu18	RW_6	rifamycin antibiotic	18	3
+Kathmandu18	RW_6	streptogramin A antibiotic	10	4
+Kathmandu18	RW_6	streptogramin B antibiotic	11	4
+Kathmandu18	RW_6	streptogramin antibiotic	13	6
+Kathmandu18	RW_6	sulfonamide antibiotic	2	0
+Kathmandu18	RW_6	tetracycline antibiotic	82	9

@@ -1,0 +1,5 @@
+Kathmandu18 ARG x mobility overlap complete.
+Samples: 18
+Full overlap rows: 11636
+Strict+Perfect rows: 11636
+Output directory: rr-analysis/kathmandu_kbase/results/arg_mobility_overlap_kathmandu18

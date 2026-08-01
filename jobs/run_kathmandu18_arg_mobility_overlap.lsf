@@ -1,0 +1,20 @@
+#!/bin/bash
+#BSUB -J "KATH18_ARG_MOBILITY_OVERLAP"
+#BSUB -q single_chassis
+#BSUB -n 2
+#BSUB -R "span[hosts=1]"
+#BSUB -R "rusage[mem=16]"
+#BSUB -M 16
+#BSUB -W 04:00
+#BSUB -o logs/KATH18_ARG_MOBILITY_OVERLAP_%J.out
+#BSUB -e logs/KATH18_ARG_MOBILITY_OVERLAP_%J.err
+
+set -euo pipefail
+
+cd /rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline
+
+source /usr/local/apps/miniconda20240526/etc/profile.d/conda.sh
+conda activate /rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_rgi
+
+python -c "import pandas as pd; print('pandas', pd.__version__)"
+python scripts/make_kathmandu18_arg_mobility_overlap.py
