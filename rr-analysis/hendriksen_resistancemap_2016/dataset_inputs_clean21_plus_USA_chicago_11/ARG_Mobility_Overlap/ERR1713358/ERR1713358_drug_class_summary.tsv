@@ -1,0 +1,22 @@
+set	sample_id	Drug_Class	ARG_hits	mobile_context_ARG_hits
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	aminoglycoside antibiotic	10	1
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	carbapenem	10	3
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	cephalosporin	10	3
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	cephamycin	1	1
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	diaminopyrimidine antibiotic	1	0
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	disinfecting agents and antiseptics	18	1
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	fluoroquinolone antibiotic	17	0
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	glycopeptide antibiotic	134	0
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	glycylcycline	1	0
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	lincosamide antibiotic	9	4
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	macrolide antibiotic	6	0
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	nitroimidazole antibiotic	13	0
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	penam	12	3
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	peptide antibiotic	1	0
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	phenicol antibiotic	8	4
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	pleuromutilin antibiotic	1	1
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	streptogramin A antibiotic	1	0
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	streptogramin B antibiotic	1	0
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	streptogramin antibiotic	3	1
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	sulfonamide antibiotic	2	0
+RM2016_clean21_plus_USA_chicago_11	ERR1713358	tetracycline antibiotic	29	2
