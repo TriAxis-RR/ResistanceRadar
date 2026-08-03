@@ -1,0 +1,2 @@
+set	sample_id	total_ARG_hits	matched_to_genomad	chromosome_like_ARG_hits	plasmid_like_ARG_hits	virus_like_ARG_hits	mobile_context_ARG_hits	unclassified_ARG_hits	percent_ARG_hits_plasmid_like	percent_ARG_hits_mobile_context	loose_ARG_hits	strict_ARG_hits	perfect_ARG_hits
+pilot8	ERR1713337	23236	23236	20041	2220	975	3195	0	9.55	13.75	23030	186	20

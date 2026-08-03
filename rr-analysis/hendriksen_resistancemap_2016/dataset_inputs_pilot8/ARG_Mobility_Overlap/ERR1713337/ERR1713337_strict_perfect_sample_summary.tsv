@@ -1,0 +1,2 @@
+set	sample_id	strict_perfect_ARG_hits	chromosome_like_ARG_hits	plasmid_like_ARG_hits	virus_like_ARG_hits	mobile_context_ARG_hits	unclassified_ARG_hits	percent_ARG_hits_plasmid_like	percent_ARG_hits_mobile_context	strict_ARG_hits	perfect_ARG_hits
+pilot8	ERR1713337	206	136	63	7	70	0	30.58	33.98	186	20
