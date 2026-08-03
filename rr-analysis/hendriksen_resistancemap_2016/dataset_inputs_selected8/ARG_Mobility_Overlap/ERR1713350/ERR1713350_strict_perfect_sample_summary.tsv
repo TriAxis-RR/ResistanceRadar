@@ -1,0 +1,2 @@
+set	sample_id	strict_perfect_ARG_hits	chromosome_like_ARG_hits	plasmid_like_ARG_hits	virus_like_ARG_hits	mobile_context_ARG_hits	unclassified_ARG_hits	percent_ARG_hits_plasmid_like	percent_ARG_hits_mobile_context	strict_ARG_hits	perfect_ARG_hits
+selected8	ERR1713350	383	195	168	20	188	0	43.86	49.09	349	34
