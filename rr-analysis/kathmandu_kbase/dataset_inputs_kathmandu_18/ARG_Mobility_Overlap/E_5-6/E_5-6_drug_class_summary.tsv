@@ -1,0 +1,31 @@
+set	sample_id	Drug_Class	ARG_hits	mobile_context_ARG_hits
+Kathmandu18	E_5-6	aminocoumarin antibiotic	10	5
+Kathmandu18	E_5-6	aminoglycoside antibiotic	60	10
+Kathmandu18	E_5-6	carbapenem	38	8
+Kathmandu18	E_5-6	cephalosporin	81	12
+Kathmandu18	E_5-6	cephamycin	28	4
+Kathmandu18	E_5-6	diaminopyrimidine antibiotic	31	5
+Kathmandu18	E_5-6	disinfecting agents and antiseptics	92	7
+Kathmandu18	E_5-6	elfamycin antibiotic	4	0
+Kathmandu18	E_5-6	fluoroquinolone antibiotic	145	14
+Kathmandu18	E_5-6	glycopeptide antibiotic	271	7
+Kathmandu18	E_5-6	glycylcycline	19	4
+Kathmandu18	E_5-6	lincosamide antibiotic	21	7
+Kathmandu18	E_5-6	macrolide antibiotic	64	11
+Kathmandu18	E_5-6	monobactam	13	3
+Kathmandu18	E_5-6	nitrofuran antibiotic	1	0
+Kathmandu18	E_5-6	nitroimidazole antibiotic	25	2
+Kathmandu18	E_5-6	nucleoside antibiotic	9	0
+Kathmandu18	E_5-6	oxazolidinone antibiotic	1	0
+Kathmandu18	E_5-6	penam	73	12
+Kathmandu18	E_5-6	penem	17	3
+Kathmandu18	E_5-6	peptide antibiotic	42	5
+Kathmandu18	E_5-6	phenicol antibiotic	51	9
+Kathmandu18	E_5-6	phosphonic acid antibiotic	12	0
+Kathmandu18	E_5-6	pleuromutilin antibiotic	1	0
+Kathmandu18	E_5-6	rifamycin antibiotic	31	4
+Kathmandu18	E_5-6	streptogramin A antibiotic	11	4
+Kathmandu18	E_5-6	streptogramin B antibiotic	13	5
+Kathmandu18	E_5-6	streptogramin antibiotic	15	5
+Kathmandu18	E_5-6	sulfonamide antibiotic	3	1
+Kathmandu18	E_5-6	tetracycline antibiotic	126	17

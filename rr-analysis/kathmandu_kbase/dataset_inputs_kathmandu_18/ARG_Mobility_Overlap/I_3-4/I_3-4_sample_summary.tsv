@@ -1,0 +1,2 @@
+set	sample_id	total_ARG_hits	matched_to_genomad	chromosome_like_ARG_hits	plasmid_like_ARG_hits	virus_like_ARG_hits	mobile_context_ARG_hits	unclassified_ARG_hits	percent_ARG_hits_plasmid_like	percent_ARG_hits_mobile_context	loose_ARG_hits	strict_ARG_hits	perfect_ARG_hits
+Kathmandu18	I_3-4	763	85	678	83	2	85	0	10.878112712975097	11.140235910878113	0	681	82
