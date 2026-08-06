@@ -1,0 +1,2 @@
+sample_id	source_contigs	source_bytes	contig_count	total_assembly_bp	minimum_contig_bp	maximum_contig_bp	mean_contig_bp	median_contig_bp	N50_bp	L50_contigs	N90_bp	L90_contigs	contigs_ge_1000_bp	contigs_ge_5000_bp	GC_percent_nonambiguous	ambiguous_bases
+ERR1713354	/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline/rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_selected8/ERR1713354/ERR1713354.contigs.fa	133091110	62498	130416021	1000	95883	2086.72	1470.0	2168	15341	1131	50213	62498	3142	46.8511	0

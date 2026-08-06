@@ -1,0 +1,16 @@
+sample_id	read1	read2
+E_5-6	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/E_5-6/E_5-6_decontam_R1.fastq.gz	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/E_5-6/E_5-6_decontam_R2.fastq.gz
+I_7-8	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/I_7-8/I_7-8_decontam_R1.fastq.gz	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/I_7-8/I_7-8_decontam_R2.fastq.gz
+I_9-10	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/I_9-10/I_9-10_decontam_R1.fastq.gz	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/I_9-10/I_9-10_decontam_R2.fastq.gz
+RW_2	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/RW_2/RW_2_decontam_R1.fastq.gz	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/RW_2/RW_2_decontam_R2.fastq.gz
+RW_5	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/RW_5/RW_5_decontam_R1.fastq.gz	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/RW_5/RW_5_decontam_R2.fastq.gz
+RW_6	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/RW_6/RW_6_decontam_R1.fastq.gz	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/RW_6/RW_6_decontam_R2.fastq.gz
+E_1-2	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/E_1-2/E_1-2_decontam_R1.fastq.gz	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/E_1-2/E_1-2_decontam_R2.fastq.gz
+E_7-8	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/E_7-8/E_7-8_decontam_R1.fastq.gz	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/E_7-8/E_7-8_decontam_R2.fastq.gz
+E_9-10	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/E_9-10/E_9-10_decontam_R1.fastq.gz	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/E_9-10/E_9-10_decontam_R2.fastq.gz
+E_11-12	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/E_11-12/E_11-12_decontam_R1.fastq.gz	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/E_11-12/E_11-12_decontam_R2.fastq.gz
+I_1-2	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/I_1-2/I_1-2_decontam_R1.fastq.gz	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/I_1-2/I_1-2_decontam_R2.fastq.gz
+I_11-12	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/I_11-12/I_11-12_decontam_R1.fastq.gz	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/I_11-12/I_11-12_decontam_R2.fastq.gz
+RW_1	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/RW_1/RW_1_decontam_R1.fastq.gz	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/RW_1/RW_1_decontam_R2.fastq.gz
+RW_3	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/RW_3/RW_3_decontam_R1.fastq.gz	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/RW_3/RW_3_decontam_R2.fastq.gz
+RW_4	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/RW_4/RW_4_decontam_R1.fastq.gz	rr-analysis/kathmandu_kbase/results/bowtie2_kathmandu_batch02_ready15/RW_4/RW_4_decontam_R2.fastq.gz

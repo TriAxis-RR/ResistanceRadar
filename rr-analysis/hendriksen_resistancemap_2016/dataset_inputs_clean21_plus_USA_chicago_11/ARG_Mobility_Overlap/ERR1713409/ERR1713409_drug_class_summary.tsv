@@ -1,0 +1,28 @@
+set	sample_id	Drug_Class	ARG_hits	mobile_context_ARG_hits
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	aminocoumarin antibiotic	2	0
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	aminoglycoside antibiotic	18	5
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	carbapenem	9	2
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	cephalosporin	20	4
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	cephamycin	6	1
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	diaminopyrimidine antibiotic	4	0
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	disinfecting agents and antiseptics	24	2
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	elfamycin antibiotic	1	0
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	fluoroquinolone antibiotic	19	4
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	glycopeptide antibiotic	91	1
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	glycylcycline	4	0
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	lincosamide antibiotic	9	4
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	macrolide antibiotic	23	3
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	monobactam	1	0
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	nitroimidazole antibiotic	3	1
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	nucleoside antibiotic	4	1
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	penam	20	4
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	penem	3	1
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	peptide antibiotic	9	0
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	phenicol antibiotic	7	0
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	phosphonic acid antibiotic	5	1
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	pleuromutilin antibiotic	1	1
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	rifamycin antibiotic	7	0
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	streptogramin A antibiotic	4	1
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	streptogramin B antibiotic	4	1
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	streptogramin antibiotic	6	2
+RM2016_clean21_plus_USA_chicago_11	ERR1713409	tetracycline antibiotic	21	3

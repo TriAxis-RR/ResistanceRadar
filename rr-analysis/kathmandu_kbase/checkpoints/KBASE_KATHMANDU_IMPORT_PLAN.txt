@@ -1,0 +1,49 @@
+Dataset: Kathmandu wastewater ARG metagenomics from KBase
+
+Source:
+KBase Narrative: Kathmandu Wastewater ARG Metagenomics Analysis
+URL visible in browser: narrative.kbase.us/narrative/256529
+Created by: sunil pandey / neil347
+
+Data visible:
+Raw FASTQ files in KBase Import tab
+KBase MEGAHIT Assembly objects in Data panel
+
+Import strategy:
+Download or retrieve raw FASTQ files in batches of <=10 files at a time.
+Preserve paired-end structure: *_1.fastq.gz and *_2.fastq.gz must stay together.
+Store under:
+rr-analysis/kathmandu_kbase/raw_fastq
+
+Pipeline plan:
+FASTQ -> fastp -> Bowtie2 -> CARD/RGI -> DIAMOND/CARD -> MEGAHIT -> geNomad
+
+Important:
+Do not mix Kathmandu/KBase files with Hendriksen folders.
+Do not commit raw FASTQ or large assembly outputs to Git.
+Only commit scripts, sample sheets, metadata, checkpoints, and small summary tables.
+EOFcat > rr-analysis/kathmandu_kbase/checkpoints/KBASE_KATHMANDU_IMPORT_PLAN.txt <<'EOF'
+Dataset: Kathmandu wastewater ARG metagenomics from KBase
+
+Source:
+KBase Narrative: Kathmandu Wastewater ARG Metagenomics Analysis
+URL visible in browser: narrative.kbase.us/narrative/256529
+Created by: sunil pandey / neil347
+
+Data visible:
+Raw FASTQ files in KBase Import tab
+KBase MEGAHIT Assembly objects in Data panel
+
+Import strategy:
+Download or retrieve raw FASTQ files in batches of <=10 files at a time.
+Preserve paired-end structure: *_1.fastq.gz and *_2.fastq.gz must stay together.
+Store under:
+rr-analysis/kathmandu_kbase/raw_fastq
+
+Pipeline plan:
+FASTQ -> fastp -> Bowtie2 -> CARD/RGI -> DIAMOND/CARD -> MEGAHIT -> geNomad
+
+Important:
+Do not mix Kathmandu/KBase files with Hendriksen folders.
+Do not commit raw FASTQ or large assembly outputs to Git.
+Only commit scripts, sample sheets, metadata, checkpoints, and small summary tables.

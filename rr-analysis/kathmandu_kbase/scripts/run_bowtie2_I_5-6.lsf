@@ -1,0 +1,70 @@
+#!/bin/bash
+#BSUB -J "KATH_BT2_I56"
+#BSUB -q single_chassis
+#BSUB -n 2
+#BSUB -R "span[hosts=1]"
+#BSUB -R "rusage[mem=8GB]"
+#BSUB -W 24:00
+#BSUB -o rr-analysis/kathmandu_kbase/logs/KATH_BT2_I56_%J.out
+#BSUB -e rr-analysis/kathmandu_kbase/logs/KATH_BT2_I56_%J.err
+
+set -euo pipefail
+
+REPO="/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline"
+SHEET="${REPO}/rr-analysis/kathmandu_kbase/metadata/kathmandu_I_5-6_bowtie2_sample.tsv"
+INDEX="/rsstu/users/s/sleblan/MismatchRepair/Project/references/decontamination/v1.0/decontamination_v1.0"
+
+cd "${REPO}"
+
+source /usr/local/apps/miniconda20240526/etc/profile.d/conda.sh
+conda activate /rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_meta
+
+mkdir -p "${REPO}/rr-analysis/kathmandu_kbase/logs"
+mkdir -p "${REPO}/rr-analysis/kathmandu_kbase/checkpoints"
+
+sample_id=$(awk 'NR==2 {print $1}' "${SHEET}")
+matrix=$(awk 'NR==2 {print $2}' "${SHEET}")
+source_group=$(awk 'NR==2 {print $3}' "${SHEET}")
+r1=$(awk 'NR==2 {print $4}' "${SHEET}")
+r2=$(awk 'NR==2 {print $5}' "${SHEET}")
+out_dir=$(awk 'NR==2 {print $6}' "${SHEET}")
+
+echo "========================================"
+echo "Kathmandu Bowtie2/decontamination I_5-6"
+echo "Sample: ${sample_id}"
+echo "Matrix: ${matrix}"
+echo "Source group: ${source_group}"
+echo "R1: ${r1}"
+echo "R2: ${r2}"
+echo "Index: ${INDEX}"
+echo "Output: ${out_dir}"
+echo "Start: $(date)"
+echo "========================================"
+
+if [[ ! -s "${r1}" ]]; then
+  echo "ERROR: Missing R1: ${r1}"
+  exit 1
+fi
+
+if [[ ! -s "${r2}" ]]; then
+  echo "ERROR: Missing R2: ${r2}"
+  exit 1
+fi
+
+mkdir -p "${out_dir}"
+
+bowtie2 \
+  --very-sensitive \
+  -x "${INDEX}" \
+  -1 "${r1}" \
+  -2 "${r2}" \
+  --threads 2 \
+  --un-conc-gz "${out_dir}/${sample_id}_decontam_R%.fastq.gz" \
+  -S /dev/null \
+  2> "${out_dir}/${sample_id}.bowtie2.summary.txt"
+
+touch "${REPO}/rr-analysis/kathmandu_kbase/checkpoints/${sample_id}_BATCH02_I56_BOWTIE2_COMPLETE.txt"
+
+echo "DONE: ${sample_id}"
+echo "End: $(date)"
+ls -lh "${out_dir}"

@@ -1,0 +1,25 @@
+Checkpoint: KATHMANDU_BATCH01_2SAMPLE_RGI_BWT_COMPLETE
+
+Samples completed:
+E_3-4
+I_3-4
+
+Stage:
+CARD/RGI BWT read-mapping ARG profiling
+
+Status:
+Complete
+
+Outputs:
+allele_mapping_data.json
+allele_mapping_data.txt
+gene_mapping_data.txt
+overall_mapping_stats.txt
+reference_mapping_stats.txt
+artifacts_mapping_stats.txt
+sorted.length_100.bam
+sorted.length_100.bam.bai
+
+Notes:
+The BAM and BAI files are large analysis outputs and should not be committed to GitHub.
+Only scripts, sample sheets, checkpoints, and small summary tables should be committed.

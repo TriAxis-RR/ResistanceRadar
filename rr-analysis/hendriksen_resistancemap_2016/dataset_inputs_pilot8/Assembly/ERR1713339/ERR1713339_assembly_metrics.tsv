@@ -1,0 +1,2 @@
+sample_id	source_contigs	source_bytes	contig_count	total_assembly_bp	minimum_contig_bp	maximum_contig_bp	mean_contig_bp	median_contig_bp	N50_bp	L50_contigs	N90_bp	L90_contigs	contigs_ge_1000_bp	contigs_ge_5000_bp	GC_percent_nonambiguous	ambiguous_bases
+ERR1713339	/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline/rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_pilot8/ERR1713339/ERR1713339.contigs.fa	19315649	8881	18943944	1000	68912	2133.09	1442	2185	2013	1126	7092	8881	496	47.5501	0

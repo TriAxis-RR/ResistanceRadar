@@ -1,0 +1,35 @@
+Kathmandu/Nepal KBase batch01 2-sample Bowtie2/decontamination checkpoint
+
+Date checked: 2026-06-27
+
+Samples:
+E_3-4
+I_3-4
+
+Input:
+FASTP-cleaned paired-end FASTQ files from:
+rr-analysis/kathmandu_kbase/results/fastp_batch01_2sample
+
+Output:
+Bowtie2-decontaminated paired-end FASTQ files in:
+rr-analysis/kathmandu_kbase/results/bowtie2_batch01_2sample
+
+Files verified:
+E_3-4/E_3-4_decontam_R1.fastq.gz
+E_3-4/E_3-4_decontam_R2.fastq.gz
+I_3-4/I_3-4_decontam_R1.fastq.gz
+I_3-4/I_3-4_decontam_R2.fastq.gz
+
+Bowtie2 decontamination summary:
+E_3-4: 102,271,922 paired reads; 0.04% overall alignment rate to decontamination index.
+I_3-4: 84,073,758 paired reads; 0.19% overall alignment rate to decontamination index.
+
+Validation:
+gzip -t completed successfully for all four decontaminated FASTQ files.
+gzip_exit_code=0
+
+Job:
+KATH_BT2_B01 job 565491 completed successfully for both samples.
+
+Next step:
+Run CARD/RGI BWT ARG profiling on the Bowtie2-decontaminated FASTQ files.

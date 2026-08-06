@@ -1,0 +1,57 @@
+#!/bin/bash
+#BSUB -J "KATH_RGI_MAIN_C10[1-10]%2"
+#BSUB -q single_chassis
+#BSUB -n 8
+#BSUB -R "rusage[mem=32GB]"
+#BSUB -M 32GB
+#BSUB -W 24:00
+#BSUB -o rr-analysis/kathmandu_kbase/logs/KATH_RGI_MAIN_C10_%I_%J.out
+#BSUB -e rr-analysis/kathmandu_kbase/logs/KATH_RGI_MAIN_C10_%I_%J.err
+
+set -euo pipefail
+
+cd /rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline
+
+source /usr/local/apps/miniconda20240526/etc/profile.d/conda.sh
+conda activate /rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_rgi
+
+SHEET="rr-analysis/kathmandu_kbase/metadata/kathmandu_genomad_completed10_rgi_main_contigs_samples.tsv"
+OUTROOT="rr-analysis/kathmandu_kbase/results/rgi_main_contigs_genomad_completed10"
+CKPT="rr-analysis/kathmandu_kbase/checkpoints"
+
+LINE=$((LSB_JOBINDEX + 1))
+
+SAMPLE=$(awk -F'\t' -v line="$LINE" 'NR==line {print $1}' "$SHEET")
+CONTIGS=$(awk -F'\t' -v line="$LINE" 'NR==line {print $2}' "$SHEET")
+
+if [[ -z "$SAMPLE" || -z "$CONTIGS" ]]; then
+  echo "ERROR: Could not read sample or contigs from line $LINE"
+  exit 1
+fi
+
+if [[ ! -s "$CONTIGS" ]]; then
+  echo "ERROR: Contigs file missing or empty: $CONTIGS"
+  exit 1
+fi
+
+mkdir -p "${OUTROOT}/${SAMPLE}"
+
+echo "Sample: $SAMPLE"
+echo "Contigs: $CONTIGS"
+echo "Started: $(date)"
+
+rgi main \
+  -i "$CONTIGS" \
+  -o "${OUTROOT}/${SAMPLE}/${SAMPLE}_rgi_main" \
+  -t contig \
+  -a DIAMOND \
+  -n 8 \
+  --clean
+
+if [[ ! -s "${OUTROOT}/${SAMPLE}/${SAMPLE}_rgi_main.txt" ]]; then
+  echo "ERROR: Expected RGI output missing: ${OUTROOT}/${SAMPLE}/${SAMPLE}_rgi_main.txt"
+  exit 1
+fi
+
+echo "Completed: $(date)"
+echo "$SAMPLE RGI-main contig complete" > "${CKPT}/${SAMPLE}_KATH_RGI_MAIN_CONTIG_COMPLETE.txt"

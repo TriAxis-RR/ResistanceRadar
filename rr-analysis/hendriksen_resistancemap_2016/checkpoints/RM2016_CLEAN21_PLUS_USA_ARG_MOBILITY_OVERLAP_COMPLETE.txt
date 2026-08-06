@@ -1,0 +1,5 @@
+RM2016 clean21 plus USA Chicago 11 ARG x mobility overlap complete.
+Samples: 11
+Full overlap rows: 1457
+Strict+Perfect rows: 1457
+Output directory: rr-analysis/hendriksen_resistancemap_2016/stage3_5_arg_mobility_overlap_clean21_plus_USA_chicago_11

@@ -1,0 +1,2 @@
+sample_id	source_contigs	source_bytes	contig_count	total_assembly_bp	minimum_contig_bp	maximum_contig_bp	mean_contig_bp	median_contig_bp	N50_bp	L50_contigs	N90_bp	L90_contigs	contigs_ge_1000_bp	contigs_ge_5000_bp	GC_percent_nonambiguous	ambiguous_bases
+ERR1713372	rr-analysis/hendriksen_resistancemap_2016/stage3_5_megahit_clean21_plus_USA_chicago_11/results/ERR1713372/final.contigs.fa	372465217	173063	365025841	1000	202231	2109.21	1478	2217	42092	1132	138679	173063	9145	51.3389	0

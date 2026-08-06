@@ -1,0 +1,115 @@
+sample_id	genomad_context	drug_class	ARG_hit_count
+ERR1713365	chromosome_like	tetracycline antibiotic	2471
+ERR1713365	chromosome_like	macrolide antibiotic	2207
+ERR1713365	chromosome_like	fluoroquinolone antibiotic	2137
+ERR1713365	chromosome_like	penam	1684
+ERR1713365	chromosome_like	peptide antibiotic	1348
+ERR1713365	chromosome_like	cephalosporin	1226
+ERR1713365	chromosome_like	disinfecting agents and antiseptics	1055
+ERR1713365	chromosome_like	phenicol antibiotic	1026
+ERR1713365	chromosome_like	aminoglycoside antibiotic	1005
+ERR1713365	chromosome_like	cephamycin	848
+ERR1713365	chromosome_like	carbapenem	835
+ERR1713365	chromosome_like	glycopeptide antibiotic	668
+ERR1713365	chromosome_like	aminocoumarin antibiotic	663
+ERR1713365	chromosome_like	rifamycin antibiotic	537
+ERR1713365	chromosome_like	monobactam	501
+ERR1713365	chromosome_like	penem	500
+ERR1713365	chromosome_like	diaminopyrimidine antibiotic	411
+ERR1713365	chromosome_like	glycylcycline	341
+ERR1713365	chromosome_like	lincosamide antibiotic	300
+ERR1713365	chromosome_like	streptogramin antibiotic	256
+ERR1713365	chromosome_like	sulfonamide antibiotic	214
+ERR1713365	chromosome_like	nitroimidazole antibiotic	194
+ERR1713365	chromosome_like	streptogramin A antibiotic	171
+ERR1713365	chromosome_like	nucleoside antibiotic	155
+ERR1713365	chromosome_like	oxazolidinone antibiotic	151
+ERR1713365	chromosome_like	pleuromutilin antibiotic	147
+ERR1713365	chromosome_like	mupirocin-like antibiotic	135
+ERR1713365	chromosome_like	phosphonic acid antibiotic	132
+ERR1713365	chromosome_like	isoniazid-like antibiotic	91
+ERR1713365	chromosome_like	fusidane antibiotic	86
+ERR1713365	chromosome_like	elfamycin antibiotic	70
+ERR1713365	chromosome_like	streptogramin B antibiotic	66
+ERR1713365	chromosome_like	bicyclomycin-like antibiotic	51
+ERR1713365	chromosome_like	antibacterial free fatty acids	35
+ERR1713365	chromosome_like	salicylic acid antibiotic	21
+ERR1713365	chromosome_like	nitrofuran antibiotic	17
+ERR1713365	chromosome_like	pyrazine antibiotic	13
+ERR1713365	chromosome_like	orthosomycin antibiotic	5
+ERR1713365	chromosome_like	polyamine antibiotic	1
+ERR1713365	chromosome_like	thioamide antibiotic	1
+ERR1713365	plasmid_like	tetracycline antibiotic	839
+ERR1713365	plasmid_like	macrolide antibiotic	809
+ERR1713365	plasmid_like	fluoroquinolone antibiotic	733
+ERR1713365	plasmid_like	penam	613
+ERR1713365	plasmid_like	cephalosporin	502
+ERR1713365	plasmid_like	phenicol antibiotic	434
+ERR1713365	plasmid_like	disinfecting agents and antiseptics	388
+ERR1713365	plasmid_like	carbapenem	383
+ERR1713365	plasmid_like	peptide antibiotic	370
+ERR1713365	plasmid_like	cephamycin	368
+ERR1713365	plasmid_like	aminoglycoside antibiotic	333
+ERR1713365	plasmid_like	monobactam	261
+ERR1713365	plasmid_like	penem	254
+ERR1713365	plasmid_like	aminocoumarin antibiotic	249
+ERR1713365	plasmid_like	diaminopyrimidine antibiotic	176
+ERR1713365	plasmid_like	glycopeptide antibiotic	171
+ERR1713365	plasmid_like	rifamycin antibiotic	151
+ERR1713365	plasmid_like	glycylcycline	113
+ERR1713365	plasmid_like	lincosamide antibiotic	93
+ERR1713365	plasmid_like	sulfonamide antibiotic	72
+ERR1713365	plasmid_like	streptogramin antibiotic	63
+ERR1713365	plasmid_like	nitroimidazole antibiotic	47
+ERR1713365	plasmid_like	nucleoside antibiotic	46
+ERR1713365	plasmid_like	streptogramin A antibiotic	45
+ERR1713365	plasmid_like	pleuromutilin antibiotic	42
+ERR1713365	plasmid_like	phosphonic acid antibiotic	37
+ERR1713365	plasmid_like	oxazolidinone antibiotic	31
+ERR1713365	plasmid_like	isoniazid-like antibiotic	31
+ERR1713365	plasmid_like	mupirocin-like antibiotic	30
+ERR1713365	plasmid_like	bicyclomycin-like antibiotic	19
+ERR1713365	plasmid_like	antibacterial free fatty acids	14
+ERR1713365	plasmid_like	streptogramin B antibiotic	11
+ERR1713365	plasmid_like	elfamycin antibiotic	9
+ERR1713365	plasmid_like	fusidane antibiotic	5
+ERR1713365	plasmid_like	pyrazine antibiotic	4
+ERR1713365	plasmid_like	nitrofuran antibiotic	3
+ERR1713365	plasmid_like	salicylic acid antibiotic	3
+ERR1713365	plasmid_like	polyamine antibiotic	1
+ERR1713365	plasmid_like	thioamide antibiotic	1
+ERR1713365	virus_like	fluoroquinolone antibiotic	106
+ERR1713365	virus_like	tetracycline antibiotic	78
+ERR1713365	virus_like	macrolide antibiotic	68
+ERR1713365	virus_like	peptide antibiotic	64
+ERR1713365	virus_like	penam	58
+ERR1713365	virus_like	cephalosporin	57
+ERR1713365	virus_like	rifamycin antibiotic	45
+ERR1713365	virus_like	carbapenem	43
+ERR1713365	virus_like	phenicol antibiotic	41
+ERR1713365	virus_like	cephamycin	38
+ERR1713365	virus_like	penem	36
+ERR1713365	virus_like	aminoglycoside antibiotic	32
+ERR1713365	virus_like	mupirocin-like antibiotic	30
+ERR1713365	virus_like	disinfecting agents and antiseptics	30
+ERR1713365	virus_like	monobactam	29
+ERR1713365	virus_like	diaminopyrimidine antibiotic	25
+ERR1713365	virus_like	glycopeptide antibiotic	17
+ERR1713365	virus_like	lincosamide antibiotic	16
+ERR1713365	virus_like	aminocoumarin antibiotic	15
+ERR1713365	virus_like	streptogramin antibiotic	10
+ERR1713365	virus_like	pleuromutilin antibiotic	9
+ERR1713365	virus_like	fusidane antibiotic	7
+ERR1713365	virus_like	isoniazid-like antibiotic	7
+ERR1713365	virus_like	nitroimidazole antibiotic	6
+ERR1713365	virus_like	streptogramin A antibiotic	6
+ERR1713365	virus_like	glycylcycline	6
+ERR1713365	virus_like	sulfonamide antibiotic	6
+ERR1713365	virus_like	oxazolidinone antibiotic	5
+ERR1713365	virus_like	elfamycin antibiotic	4
+ERR1713365	virus_like	nucleoside antibiotic	3
+ERR1713365	virus_like	phosphonic acid antibiotic	3
+ERR1713365	virus_like	salicylic acid antibiotic	2
+ERR1713365	virus_like	thioamide antibiotic	2
+ERR1713365	virus_like	pyrazine antibiotic	2
+ERR1713365	virus_like	antibacterial free fatty acids	1

@@ -1,0 +1,8 @@
+sample_id	matrix	R1	R2	out_dir
+E_1-2	effluent	rr-analysis/kathmandu_kbase/kbase_clean_reads/batch02/E_1-2_1.fastq.gz	rr-analysis/kathmandu_kbase/kbase_clean_reads/batch02/E_1-2_2.fastq.gz	rr-analysis/kathmandu_kbase/results/fastp_batch02_7sample/E_1-2
+E_5-6	effluent	rr-analysis/kathmandu_kbase/kbase_clean_reads/batch02/E_5-6_1.fastq.gz	rr-analysis/kathmandu_kbase/kbase_clean_reads/batch02/E_5-6_2.fastq.gz	rr-analysis/kathmandu_kbase/results/fastp_batch02_7sample/E_5-6
+I_7-8	influent	rr-analysis/kathmandu_kbase/kbase_clean_reads/batch02/I_7-8_1.fastq.gz	rr-analysis/kathmandu_kbase/kbase_clean_reads/batch02/I_7-8_2.fastq.gz	rr-analysis/kathmandu_kbase/results/fastp_batch02_7sample/I_7-8
+I_9-10	influent	rr-analysis/kathmandu_kbase/kbase_clean_reads/batch02/I_9-10_1.fastq.gz	rr-analysis/kathmandu_kbase/kbase_clean_reads/batch02/I_9-10_2.fastq.gz	rr-analysis/kathmandu_kbase/results/fastp_batch02_7sample/I_9-10
+RW_2	river_water	rr-analysis/kathmandu_kbase/kbase_clean_reads/batch02/RW_2_1.fastq.gz	rr-analysis/kathmandu_kbase/kbase_clean_reads/batch02/RW_2_2.fastq.gz	rr-analysis/kathmandu_kbase/results/fastp_batch02_7sample/RW_2
+RW_5	river_water	rr-analysis/kathmandu_kbase/kbase_clean_reads/batch02/RW_5_1.fastq.gz	rr-analysis/kathmandu_kbase/kbase_clean_reads/batch02/RW_5_2.fastq.gz	rr-analysis/kathmandu_kbase/results/fastp_batch02_7sample/RW_5
+RW_6	river_water	rr-analysis/kathmandu_kbase/kbase_clean_reads/batch02/RW_6_1.fastq.gz	rr-analysis/kathmandu_kbase/kbase_clean_reads/batch02/RW_6_2.fastq.gz	rr-analysis/kathmandu_kbase/results/fastp_batch02_7sample/RW_6

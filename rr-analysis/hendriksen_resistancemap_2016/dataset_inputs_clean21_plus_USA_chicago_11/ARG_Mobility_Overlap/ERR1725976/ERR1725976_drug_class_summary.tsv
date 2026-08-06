@@ -1,0 +1,18 @@
+set	sample_id	Drug_Class	ARG_hits	mobile_context_ARG_hits
+RM2016_clean21_plus_USA_chicago_11	ERR1725976	aminoglycoside antibiotic	3	1
+RM2016_clean21_plus_USA_chicago_11	ERR1725976	carbapenem	3	0
+RM2016_clean21_plus_USA_chicago_11	ERR1725976	cephalosporin	3	0
+RM2016_clean21_plus_USA_chicago_11	ERR1725976	disinfecting agents and antiseptics	8	1
+RM2016_clean21_plus_USA_chicago_11	ERR1725976	fluoroquinolone antibiotic	4	1
+RM2016_clean21_plus_USA_chicago_11	ERR1725976	glycopeptide antibiotic	12	0
+RM2016_clean21_plus_USA_chicago_11	ERR1725976	glycylcycline	1	0
+RM2016_clean21_plus_USA_chicago_11	ERR1725976	lincosamide antibiotic	5	2
+RM2016_clean21_plus_USA_chicago_11	ERR1725976	macrolide antibiotic	10	6
+RM2016_clean21_plus_USA_chicago_11	ERR1725976	penam	3	0
+RM2016_clean21_plus_USA_chicago_11	ERR1725976	phosphonic acid antibiotic	1	0
+RM2016_clean21_plus_USA_chicago_11	ERR1725976	pleuromutilin antibiotic	1	0
+RM2016_clean21_plus_USA_chicago_11	ERR1725976	streptogramin A antibiotic	1	1
+RM2016_clean21_plus_USA_chicago_11	ERR1725976	streptogramin B antibiotic	1	1
+RM2016_clean21_plus_USA_chicago_11	ERR1725976	streptogramin antibiotic	4	2
+RM2016_clean21_plus_USA_chicago_11	ERR1725976	sulfonamide antibiotic	1	0
+RM2016_clean21_plus_USA_chicago_11	ERR1725976	tetracycline antibiotic	9	3

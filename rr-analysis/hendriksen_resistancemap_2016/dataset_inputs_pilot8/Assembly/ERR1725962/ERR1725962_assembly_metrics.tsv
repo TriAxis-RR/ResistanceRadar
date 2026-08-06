@@ -1,0 +1,2 @@
+sample_id	source_contigs	source_bytes	contig_count	total_assembly_bp	minimum_contig_bp	maximum_contig_bp	mean_contig_bp	median_contig_bp	N50_bp	L50_contigs	N90_bp	L90_contigs	contigs_ge_1000_bp	contigs_ge_5000_bp	GC_percent_nonambiguous	ambiguous_bases
+ERR1725962	/rsstu/users/s/sleblan/MismatchRepair/Project/pipeline/rr-pipeline/rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_pilot8/ERR1725962/ERR1725962.contigs.fa	60163209	29687	58906881	1000	51670	1984.27	1483	2042	8070	1128	24134	29687	1193	54.6021	0

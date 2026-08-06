@@ -1,0 +1,2 @@
+sample_id	source_contigs	source_bytes	contig_count	total_assembly_bp	minimum_contig_bp	maximum_contig_bp	mean_contig_bp	median_contig_bp	N50_bp	L50_contigs	N90_bp	L90_contigs	contigs_ge_1000_bp	contigs_ge_5000_bp	GC_percent_nonambiguous	ambiguous_bases
+RW_5	rr-analysis/kathmandu_kbase/results/megahit_kathmandu_remaining_after_diamond_complete/RW_5/RW_5.contigs.fa	788815277	354174	773360162	1000	145759	2183.56	1484.0	2325	81152	1137	281484	354174	20806	50.3141	0

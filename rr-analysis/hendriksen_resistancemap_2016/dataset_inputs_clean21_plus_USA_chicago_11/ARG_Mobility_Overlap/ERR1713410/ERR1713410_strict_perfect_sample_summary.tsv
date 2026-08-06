@@ -1,0 +1,2 @@
+set	sample_id	strict_perfect_ARG_hits	chromosome_like_ARG_hits	plasmid_like_ARG_hits	virus_like_ARG_hits	mobile_context_ARG_hits	unclassified_ARG_hits	percent_ARG_hits_plasmid_like	percent_ARG_hits_mobile_context	strict_ARG_hits	perfect_ARG_hits
+RM2016_clean21_plus_USA_chicago_11	ERR1713410	241	202	37	2	39	0	15.352697095435685	16.182572614107883	209	32
