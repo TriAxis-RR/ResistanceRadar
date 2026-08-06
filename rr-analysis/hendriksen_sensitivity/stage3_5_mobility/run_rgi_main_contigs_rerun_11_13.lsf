@@ -1,0 +1,57 @@
+#!/bin/bash
+#BSUB -J RGI_MAIN_CONTIGS16_RERUN[11-13]%2
+#BSUB -q single_chassis
+#BSUB -n 4
+#BSUB -R "rusage[mem=16]"
+#BSUB -W 12:00
+#BSUB -o rr-analysis/hendriksen_sensitivity/stage3_5_mobility/logs/RGI_MAIN_CONTIGS16_RERUN_%I_%J.out
+#BSUB -e rr-analysis/hendriksen_sensitivity/stage3_5_mobility/logs/RGI_MAIN_CONTIGS16_RERUN_%I_%J.err
+
+set -euo pipefail
+
+source /usr/local/apps/miniconda20240526/etc/profile.d/conda.sh
+conda activate /rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_rgi
+
+export PATH="/rsstu/users/s/sleblan/MismatchRepair/Project/envs/rr_rgi/bin:${PATH}"
+
+SAMPLE_SHEET="rr-analysis/hendriksen_sensitivity/metadata/hendriksen_16sample_rgi_main_contigs_samples.tsv"
+LINE_NUM=$((LSB_JOBINDEX + 1))
+
+SET=$(awk -v line="$LINE_NUM" 'NR==line {print $1}' "$SAMPLE_SHEET")
+SAMPLE=$(awk -v line="$LINE_NUM" 'NR==line {print $2}' "$SAMPLE_SHEET")
+CONTIGS=$(awk -v line="$LINE_NUM" 'NR==line {print $3}' "$SAMPLE_SHEET")
+OUT_PREFIX=$(awk -v line="$LINE_NUM" 'NR==line {print $4}' "$SAMPLE_SHEET")
+
+OUT_DIR=$(dirname "$OUT_PREFIX")
+mkdir -p "$OUT_DIR"
+mkdir -p rr-analysis/hendriksen_sensitivity/stage3_5_mobility/logs
+mkdir -p rr-analysis/hendriksen_sensitivity/checkpoints
+
+echo "=== RGI main on MEGAHIT contigs ==="
+echo "Set: $SET"
+echo "Sample: $SAMPLE"
+echo "Contigs: $CONTIGS"
+echo "Output prefix: $OUT_PREFIX"
+echo "Host: $(hostname)"
+echo "Start: $(date)"
+echo
+
+if [ ! -s "$CONTIGS" ]; then
+  echo "ERROR: contigs file missing or empty: $CONTIGS" >&2
+  exit 1
+fi
+
+rgi main \
+  --input_sequence "$CONTIGS" \
+  --output_file "$OUT_PREFIX" \
+  --input_type contig \
+  --alignment_tool DIAMOND \
+  --num_threads 4 \
+  --include_loose \
+  --clean
+
+echo
+echo "Finished RGI main for $SAMPLE"
+echo "End: $(date)"
+
+touch "rr-analysis/hendriksen_sensitivity/checkpoints/${SAMPLE}_RGI_MAIN_CONTIGS_COMPLETE.txt"

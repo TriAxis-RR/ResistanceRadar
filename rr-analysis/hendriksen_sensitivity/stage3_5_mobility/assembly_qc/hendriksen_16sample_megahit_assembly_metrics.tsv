@@ -1,0 +1,17 @@
+set	sample_id	contig_file	contig_count	total_assembled_bp	n50_bp	max_contig_bp	contigs_ge_1000bp	contigs_ge_5000bp
+pilot8	ERR1713331	rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_pilot8/ERR1713331/ERR1713331.contigs.fa	142381	318913710	2427	242602	142381	8891
+pilot8	ERR1713332	rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_pilot8/ERR1713332/ERR1713332.contigs.fa	53216	122749844	2479	330531	53216	3192
+pilot8	ERR1713334	rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_pilot8/ERR1713334/ERR1713334.contigs.fa	97591	209676199	2269	122292	97591	5364
+pilot8	ERR1713337	rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_pilot8/ERR1713337/ERR1713337.contigs.fa	130924	312471037	2628	245546	130924	8854
+pilot8	ERR1713339	rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_pilot8/ERR1713339/ERR1713339.contigs.fa	8881	18943944	2185	68912	8881	496
+pilot8	ERR1713344	rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_pilot8/ERR1713344/ERR1713344.contigs.fa	238265	528703377	2361	458590	238265	13712
+pilot8	ERR1725947	rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_pilot8/ERR1725947/ERR1725947.contigs.fa	76000	161605249	2233	97831	76000	4276
+pilot8	ERR1725962	rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_pilot8/ERR1725962/ERR1725962.contigs.fa	29687	58906881	2042	51670	29687	1193
+selected8	ERR1713350	rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_selected8/ERR1713350/ERR1713350.contigs.fa	236231	537337297	2490	131766	236231	15638
+selected8	ERR1713354	rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_selected8/ERR1713354/ERR1713354.contigs.fa	62498	130416021	2168	95883	62498	3142
+selected8	ERR1713355	rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_selected8/ERR1713355/ERR1713355.contigs.fa	167515	385512298	2483	358579	167515	10321
+selected8	ERR1713359	rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_selected8/ERR1713359/ERR1713359.contigs.fa	64719	164849191	2969	188582	64719	5359
+selected8	ERR1713361	rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_selected8/ERR1713361/ERR1713361.contigs.fa	13897	23519708	1650	19531	13897	235
+selected8	ERR1713362	rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_selected8/ERR1713362/ERR1713362.contigs.fa	173996	415921552	2677	190806	173996	12319
+selected8	ERR1713365	rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_selected8/ERR1713365/ERR1713365.contigs.fa	66802	157204252	2628	89419	66802	5043
+selected8	ERR1713369	rr-analysis/hendriksen_sensitivity/stage3_5_mobility/megahit_selected8/ERR1713369/ERR1713369.contigs.fa	154686	326514810	2199	181730	154686	7446
